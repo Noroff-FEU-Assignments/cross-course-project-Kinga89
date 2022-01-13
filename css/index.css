@@ -8,9 +8,9 @@
 body {
   margin: 0;
   font-family: "Zen Kaku Gothic Antique", "Open Sans", "Arial" "sans-serif";
-  max-width: 1000px;
 }
 
+/*HEADER*/
 .logo {
   background-image: url("../images/logo.png");
   background-repeat: no-repeat;
@@ -21,11 +21,9 @@ body {
 }
 
 header {
-  background-color: white;
-  position: fixed;
   width: 100%;
   z-index: auto;
-  font-family: Zen Kaku Gothic Antique;
+  font-family: "Zen Kaku Gothic Antique";
   font-weight: bold;
 }
 
@@ -35,6 +33,7 @@ header {
   align-items: center;
   background-color: white;
   border-bottom: black solid 1px;
+  top: 0;
 }
 
 .item {
@@ -56,26 +55,82 @@ nav li {
 nav a {
   text-decoration: none;
   padding-left: 20px;
-  color: black;
+  color: #0a3641;
 }
 
 .icons {
   display: inline;
   flex-direction: row;
   margin: 10px 10px 0px 10px;
-  padding: 20px;
   position: absolute;
   left: 85%;
+  color: #0a3641;
 }
 
 .fa-search {
-  margin: 10px;
+  margin: 10px 10px 0;
 }
 
 .fa-user-circle {
-  margin: 10px;
+  margin: 10px 10px 0;
 }
 
 .fa-shopping-basket {
   margin-left: 10px;
 }
+
+.section-one {
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.item1,
+.item2,
+.item3 {
+  font-family: "Zen Kaku Gothic Antique";
+  font-size: 1, 5em;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: #0a3641;
+}
+
+.fa-truck,
+.fa-cube,
+.fa-undo {
+  margin-left: 20px;
+}
+
+.sale {
+  background-image: url(../images/Couple.by.waterfall.png);
+  background-size: 100%;
+  min-height: 70vh;
+  background-position: bottom;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+
+.section-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 100px;
+  margin-right: 100px;
+  min-height: 70vh;
+}
+
+.men-jackets, .women-jackets {
+  width:100%;
+}
+
+
+footer {
+  background-color: #0a3641;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 20px;
+  height: 100px; }
