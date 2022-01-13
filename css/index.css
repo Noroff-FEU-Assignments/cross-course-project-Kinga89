@@ -24,11 +24,10 @@ header {
   width: 100%;
   z-index: auto;
   font-family: "Zen Kaku Gothic Antique";
-  font-weight: bold;
 }
 
 .header-container {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   align-items: center;
   background-color: white;
@@ -37,9 +36,10 @@ header {
 }
 
 .item {
-  display: inline-flex;
+  display: inline-block;
   margin: 10px 10px 0px 10px;
   padding: 10px;
+  font-weight: 900;
 }
 
 .item_logo {
@@ -50,6 +50,7 @@ header {
 }
 nav li {
   display: inline;
+  align-items: center;
 }
 
 nav a {
@@ -58,9 +59,13 @@ nav a {
   color: #0a3641;
 }
 
+nav a:hover {
+  text-decoration: underline;
+}
+
 .icons {
   display: inline;
-  flex-direction: row;
+  align-items: center;
   margin: 10px 10px 0px 10px;
   position: absolute;
   left: 85%;
@@ -79,6 +84,7 @@ nav a {
   margin-left: 10px;
 }
 
+/*MAIN HOMEPAGE*/
 .section-one {
   height: 100px;
   display: flex;
@@ -91,7 +97,7 @@ nav a {
 .item3 {
   font-family: "Zen Kaku Gothic Antique";
   font-size: 1, 5em;
-  font-weight: bolder;
+  font-weight: 900;
   text-transform: uppercase;
   color: #0a3641;
 }
@@ -104,26 +110,97 @@ nav a {
 
 .sale {
   background-image: url(../images/Couple.by.waterfall.png);
-  background-size: 100%;
+  max-width: 100%;
+  background-repeat: no-repeat;
   min-height: 70vh;
   background-position: bottom;
   margin-left: 100px;
   margin-right: 100px;
 }
 
+.button-position-sale a {
+  display: block;
+  margin-top: 300px;
+  width: 120px;
+  position: relative;
+  align-content: center;
+  bottom: 200px;
+  left: 45%;
+}
+
+.button-position-sale a:hover {
+  background-color: #c06a37;
+  color: white;
+}
+
+.sale h1 {
+  position: relative;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-size: 2em;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 900;
+  display: inline-flex;
+  left: 800px;
+  top: 30px;
+}
+
+.sale p {
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-size: 2em;
+  color: white;
+  position: relative;
+  left: 50%;
+  top: auto;
+}
 
 .section-two {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 4%;
+  margin-top: 30px;
   margin-left: 100px;
   margin-right: 100px;
   min-height: 70vh;
 }
 
-.men-jackets, .women-jackets {
-  width:100%;
+.section-two a {
+  display: block;
+  width: 120px;
+  margin: auto;
+  position: relative;
+  align-content: center;
+  bottom: 100px;
 }
 
+.section-two a:hover {
+  background-color: #c06a37;
+  color: white;
+}
+
+.men-jackets,
+.women-jackets {
+  width: 600px;
+  height: 700px;
+  background-position: center;
+}
+
+.cta-button {
+  background-color: white;
+  color: #0a3641;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  text-decoration: none;
+  border-radius: 15px;
+  padding: 10px 20px 10px 20px;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 1em;
+  font-weight: bolder;
+  text-transform: uppercase;
+  text-align: center;
+  grid-column: 2;
+  grid-row: 2;
+}
 
 footer {
   background-color: #0a3641;
@@ -133,4 +210,5 @@ footer {
   padding-top: 5px;
   padding-bottom: 5px;
   margin-top: 20px;
-  height: 100px; }
+  height: 100px;
+}
