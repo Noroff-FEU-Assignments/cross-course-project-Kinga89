@@ -1,11 +1,14 @@
 @font-face {
   font-family: "Open Sans", sans-serif;
   font-family: "Zen Kaku Gothic Antique", sans-serif;
-  src: url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Zen+Kaku+Gothic+Antique&display=swap");
+  src: url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Zen+Kaku+Gothic+Antique&display=swap")
+    format("woff2");
 }
 
 body {
   margin: 0;
+  font-family: "Zen Kaku Gothic Antique", "Open Sans", "Arial" "sans-serif";
+  max-width: 1000px;
 }
 
 .logo {
