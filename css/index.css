@@ -24,6 +24,7 @@ body {
 header {
   position: fixed;
   width: 100%;
+  min-height: 147px;
   z-index: 100;
   font-family: "Zen Kaku Gothic Antique";
 }
@@ -33,8 +34,9 @@ header {
   flex-direction: row;
   align-items: center;
   background-color: white;
-  border-bottom: black solid 2px;
+  box-shadow: 0 0 4px black;
   top: 0;
+  margin: 0;
 }
 
 .item {
@@ -86,10 +88,15 @@ nav a:hover {
   margin-left: 10px;
 }
 
+.spacer {
+  height: 150px;
+  width: 100%;
+}
+
 /*MAIN HOMEPAGE*/
 
 .section-one {
-  height: 100px;
+  max-height: 100px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -112,10 +119,6 @@ nav a:hover {
   margin-left: 20px;
 }
 
-.sale {
-  display: block;
-}
-
 .waterfall-image {
   background-image: url(../images/Couple.by.waterfall.png);
   background-repeat: no-repeat;
@@ -126,7 +129,6 @@ nav a:hover {
 .button-position-sale a {
   display: inline-block;
   top: 140px;
-  width: 120px;
   position: relative;
   bottom: 200px;
   left: 45%;
@@ -152,7 +154,6 @@ nav a:hover {
 
 .sale p {
   display: inline-flex;
-  max-width: 500px;
   font-family: "Zen Kaku Gothic Antique", sans-serif;
   font-size: 2em;
   color: white;
@@ -188,13 +189,6 @@ nav a:hover {
   height: 700px;
 }
 
-.men1 {
-  align-self: flex-start;
-}
-
-.women2 {
-  align-self: flex-start;
-}
 
 .cta-button {
   background-color: white;
@@ -226,7 +220,7 @@ nav a:hover {
   margin: 100px;
   margin: 100px;
   display: flex;
-  display: inline;
+  display: block;
   max-width: 300px;
   text-align: center;
   font-family: "Zen Kaku Gothic Antique";
@@ -239,7 +233,7 @@ nav a:hover {
 }
 
 .image-box {
-  width: 100%;
+
   position: relative;
   text-align: center;
 }
@@ -250,11 +244,11 @@ nav a:hover {
   padding: 0;
   font-family: "Zen Kaku Gothic Antique", sans-serif;
   font-size: 1em;
+  width: 100%;
 }
 
 .one-about {
   top: 100px;
-  width: 400px;
   height: 200px;
 }
 
@@ -282,6 +276,8 @@ nav a:hover {
 .image-title-one p {
   background-color: white;
   padding: 10px;
+  box-shadow: 2px black;
+  box-shadow: 0 0 1px black;
 }
 
 .image-title-two {
@@ -296,6 +292,7 @@ nav a:hover {
 .image-title-two p {
   background-color: white;
   padding: 10px;
+  box-shadow: 0 0 1px black;
 }
 
 .image-title-three {
@@ -311,6 +308,7 @@ nav a:hover {
 .image-title-three p {
   background-color: white;
   padding: 10px;
+  box-shadow: 0 0 1px black;
 }
 
 /*FOOTER*/
