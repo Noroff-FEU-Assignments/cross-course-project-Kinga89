@@ -7,6 +7,7 @@
 
 body {
   margin: 0;
+  padding: 0;
   font-family: "Zen Kaku Gothic Antique", "Open Sans", "Arial" "sans-serif";
 }
 
@@ -21,17 +22,18 @@ body {
 }
 
 header {
+  position: fixed;
   width: 100%;
-  z-index: auto;
+  z-index: 100;
   font-family: "Zen Kaku Gothic Antique";
 }
 
 .header-container {
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
   align-items: center;
   background-color: white;
-  border-bottom: black solid 1px;
+  border-bottom: black solid 2px;
   top: 0;
 }
 
@@ -43,7 +45,7 @@ header {
 }
 
 .item_logo {
-  display: inline-flex;
+  display: inline;
   margin: 10px 10px 0px 10px;
   padding: 5px;
   position: relative;
@@ -85,11 +87,13 @@ nav a:hover {
 }
 
 /*MAIN HOMEPAGE*/
+
 .section-one {
   height: 100px;
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-around;
 }
 
 .item1,
@@ -109,23 +113,24 @@ nav a:hover {
 }
 
 .sale {
+  display: block;
+}
+
+.waterfall-image {
   background-image: url(../images/Couple.by.waterfall.png);
-  max-width: 100%;
   background-repeat: no-repeat;
   min-height: 70vh;
   background-position: bottom;
-  margin-left: 100px;
-  margin-right: 100px;
 }
 
 .button-position-sale a {
-  display: block;
-  margin-top: 300px;
+  display: inline-block;
+  top: 140px;
   width: 120px;
   position: relative;
-  align-content: center;
   bottom: 200px;
   left: 45%;
+  max-width: 120px;
 }
 
 .button-position-sale a:hover {
@@ -141,36 +146,36 @@ nav a:hover {
   text-transform: uppercase;
   font-weight: 900;
   display: inline-flex;
-  left: 800px;
+  left: 1000px;
   top: 30px;
 }
 
 .sale p {
+  display: inline-flex;
+  max-width: 500px;
   font-family: "Zen Kaku Gothic Antique", sans-serif;
   font-size: 2em;
   color: white;
   position: relative;
-  left: 50%;
-  top: auto;
+  top: 80px;
+  left: 250px;
 }
 
 .section-two {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 4%;
-  margin-top: 30px;
-  margin-left: 100px;
-  margin-right: 100px;
-  min-height: 70vh;
+  display: flex;
+  flex-direction: row;
+  height: 700px;
+  margin: 50px 150px;
+  gap: 75px;
+  background-image: cover;
 }
 
 .section-two a {
-  display: block;
+  display: inline-block;
   width: 120px;
-  margin: auto;
   position: relative;
-  align-content: center;
   bottom: 100px;
+  left: 230px;
 }
 
 .section-two a:hover {
@@ -178,11 +183,17 @@ nav a:hover {
   color: white;
 }
 
-.men-jackets,
-.women-jackets {
+.section-two img {
   width: 600px;
   height: 700px;
-  background-position: center;
+}
+
+.men1 {
+  align-self: flex-start;
+}
+
+.women2 {
+  align-self: flex-start;
 }
 
 .cta-button {
@@ -198,10 +209,111 @@ nav a:hover {
   font-weight: bolder;
   text-transform: uppercase;
   text-align: center;
-  grid-column: 2;
-  grid-row: 2;
 }
 
+.section-three {
+  max-width: 1200px;
+  margin: 50px 150px;
+  display: flex;
+  min-height: 70vh;
+}
+
+.section-three > * {
+  flex: 1;
+}
+
+.text-box {
+  margin: 100px;
+  margin: 100px;
+  display: flex;
+  display: inline;
+  max-width: 300px;
+  text-align: center;
+  font-family: "Zen Kaku Gothic Antique";
+  font-size: 1em;
+}
+
+.text-box h2 {
+  margin-top: 10px;
+  font-weight: bolder;
+}
+
+.image-box {
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.about-image {
+  display: flex;
+  position: absolute;
+  padding: 0;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-size: 1em;
+}
+
+.one-about {
+  top: 100px;
+  width: 400px;
+  height: 200px;
+}
+
+.two-about {
+  width: 300px;
+  height: 200px;
+  bottom: 0px;
+  right: 0px;
+}
+
+.three-about {
+  top: 0px;
+  right: 0px;
+  width: 300px;
+  height: 200px;
+}
+
+.image-title-one {
+  position: absolute;
+  top: 0px;
+  padding: 0 5;
+  width: 300px;
+}
+
+.image-title-one p {
+  background-color: white;
+  padding: 10px;
+}
+
+.image-title-two {
+  position: absolute;
+  height: 200px;
+  bottom: 0px;
+  right: 0px;
+  padding: 0 5;
+  width: 300px;
+}
+
+.image-title-two p {
+  background-color: white;
+  padding: 10px;
+}
+
+.image-title-three {
+  position: absolute;
+  height: 200px;
+  bottom: 0px;
+  right: 0px;
+  padding: 0 5;
+  width: 300px;
+  display: inline;
+}
+
+.image-title-three p {
+  background-color: white;
+  padding: 10px;
+}
+
+/*FOOTER*/
 footer {
   background-color: #0a3641;
   font-family: "Open Sans", sans-serif;
@@ -210,5 +322,86 @@ footer {
   padding-top: 5px;
   padding-bottom: 5px;
   margin-top: 20px;
-  height: 100px;
+  height: 200px;
+  width: 100%;
+}
+
+.flex-container-footer {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.address {
+  margin: 0px;
+  display: flex;
+  flex: 30%;
+  max-width: 500px;
+  text-align: left;
+  padding-left: 50px;
+}
+
+.address h2 {
+  margin-left: 60px;
+}
+
+ul li {
+  display: block;
+  text-align: left;
+  list-style-type: none;
+  line-height: normal;
+  font-size: 0, 5rem;
+}
+
+.address > * {
+  flex: 1;
+}
+
+.fa-envelope {
+  margin-right: 10px;
+}
+
+.fa-home {
+  margin-right: 10px;
+}
+
+.address_list {
+  margin-left: 30px;
+}
+
+.footer-nav {
+  display: flex;
+  flex: 30%;
+  max-width: 500px;
+  margin: 0px;
+  text-align: left;
+  padding-left: 0;
+}
+
+.footer-nav > * {
+  flex: 1;
+}
+
+.footer-nav-two {
+  flex: 30%;
+  margin: 0px;
+  display: flex;
+  max-width: 500px;
+  text-align: left;
+  padding-left: 0;
+  padding-right: 50px;
+}
+
+.footer-nav-two > * {
+  flex: 1;
+}
+
+.footer-nav-items {
+  display: block;
+  margin-top: 70px;
+  text-align: left;
+  list-style-type: none;
+  line-height: normal;
+  font-size: 0, 5rem;
+  text-decoration: underline;
 }
