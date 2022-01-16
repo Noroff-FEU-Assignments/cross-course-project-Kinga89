@@ -11,20 +11,24 @@ body {
   font-family: "Zen Kaku Gothic Antique", "Open Sans", "Arial" "sans-serif";
 }
 
+main {
+  margin: 0 100px;
+}
+
 /*HEADER*/
 .logo {
   background-image: url("../images/logo.png");
   background-repeat: no-repeat;
   background-size: cover;
-  max-width: 230px;
-  max-height: 80px;
+  max-width: 200px;
+  max-height: 60px;
   margin: 20px;
 }
 
 header {
   position: fixed;
   width: 100%;
-  min-height: 147px;
+  min-height: 100px;
   z-index: 100;
   font-family: "Zen Kaku Gothic Antique";
 }
@@ -70,9 +74,8 @@ nav a:hover {
 .icons {
   display: inline;
   align-items: center;
-  margin: 10px 10px 0px 10px;
   position: absolute;
-  left: 85%;
+  left: 80%;
   color: #0a3641;
 }
 
@@ -89,7 +92,7 @@ nav a:hover {
 }
 
 .spacer {
-  height: 150px;
+  min-height: 130px;
   width: 100%;
 }
 
@@ -101,6 +104,7 @@ nav a:hover {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  margin: 20px 0;
 }
 
 .item1,
@@ -119,76 +123,98 @@ nav a:hover {
   margin-left: 20px;
 }
 
+.sale {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
 .waterfall-image {
   background-image: url(../images/Couple.by.waterfall.png);
   background-repeat: no-repeat;
   min-height: 70vh;
   background-position: bottom;
-}
-
-.button-position-sale a {
-  display: inline-block;
-  top: 140px;
+  width: 100%;
   position: relative;
-  bottom: 200px;
-  left: 45%;
-  max-width: 120px;
+  z-index: 1;
 }
 
-.button-position-sale a:hover {
+.waterfall-image a {
+  display: inline-block;
+  position: relative;
+  top: 180px;
+  left: 450px;
+}
+
+.waterfall-image a:hover {
   background-color: #c06a37;
   color: white;
 }
 
-.sale h1 {
-  position: relative;
+.waterfall-image h1 {
+  position: absolute;
   font-family: "Zen Kaku Gothic Antique", sans-serif;
   font-size: 2em;
   color: white;
   text-transform: uppercase;
   font-weight: 900;
   display: inline-flex;
-  left: 1000px;
-  top: 30px;
+  top: 0px;
+  right: 100px;
 }
 
-.sale p {
+.waterfall-image p {
+  position: absolute;
   display: inline-flex;
   font-family: "Zen Kaku Gothic Antique", sans-serif;
   font-size: 2em;
   color: white;
-  position: relative;
-  top: 80px;
-  left: 250px;
+  top: 70px;
+  right: 300px;
 }
 
 .section-two {
+  width: 100%;
   display: flex;
+  justify-content: space-between;
+  position: relative;
   flex-direction: row;
-  height: 700px;
-  margin: 50px 150px;
-  gap: 75px;
+  min-height: 600px;
+  gap: 20px;
   background-image: cover;
+  margin-bottom: 50px;
 }
 
-.section-two a {
-  display: inline-block;
-  width: 120px;
-  position: relative;
+
+.men-jackets a {
+  display: inline;
+  position: absolute;
   bottom: 100px;
-  left: 230px;
+  left: 180px;
+}
+
+.women-jackets a {
+  display: inline;
+  position: absolute;
+  bottom: 100px;
+  right: 180px;
+}
+
+.men-jackets img {
+  width: 500px;
+  height: 600px;
+}
+
+.women-jackets img {
+  width: 500px;
+  height: 600px;
 }
 
 .section-two a:hover {
   background-color: #c06a37;
   color: white;
 }
-
-.section-two img {
-  width: 600px;
-  height: 700px;
-}
-
 
 .cta-button {
   background-color: white;
@@ -203,13 +229,13 @@ nav a:hover {
   font-weight: bolder;
   text-transform: uppercase;
   text-align: center;
+  width: 120px;
 }
 
 .section-three {
-  max-width: 1200px;
-  margin: 50px 150px;
   display: flex;
   min-height: 70vh;
+  margin-bottom: 50px;
 }
 
 .section-three > * {
@@ -217,8 +243,7 @@ nav a:hover {
 }
 
 .text-box {
-  margin: 100px;
-  margin: 100px;
+  margin: 0px 50px 50px 20px;
   display: flex;
   display: block;
   max-width: 300px;
@@ -233,13 +258,14 @@ nav a:hover {
 }
 
 .image-box {
-
   position: relative;
   text-align: center;
+  display: flex;
 }
 
 .about-image {
   display: flex;
+  flex: flex-end;
   position: absolute;
   padding: 0;
   font-family: "Zen Kaku Gothic Antique", sans-serif;
@@ -250,6 +276,7 @@ nav a:hover {
 .one-about {
   top: 100px;
   height: 200px;
+  margin-left: 50px;
 }
 
 .two-about {
