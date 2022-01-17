@@ -22,7 +22,7 @@ main {
   background-size: cover;
   max-width: 200px;
   max-height: 60px;
-  margin: 20px;
+  margin: 10px;
 }
 
 header {
@@ -31,16 +31,15 @@ header {
   min-height: 100px;
   z-index: 100;
   font-family: "Zen Kaku Gothic Antique";
-}
-
-.header-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   background-color: white;
   box-shadow: 0 0 4px black;
-  top: 0;
-  margin: 0;
+}
+
+.nav-container {
+  display: flex;
+  flex: 1; 
+  align-items: center;
+  justify-content: space-between;
 }
 
 .item {
@@ -52,9 +51,13 @@ header {
 
 .item_logo {
   display: inline;
-  margin: 10px 10px 0px 10px;
+
   padding: 5px;
   position: relative;
+}
+
+nav {
+  align-items: center;
 }
 nav li {
   display: inline;
@@ -63,20 +66,18 @@ nav li {
 
 nav a {
   text-decoration: none;
-  padding-left: 20px;
+  padding: 10px;
   color: #0a3641;
 }
+
 
 nav a:hover {
   text-decoration: underline;
 }
 
 .icons {
-  display: inline;
-  align-items: center;
-  position: absolute;
-  left: 80%;
   color: #0a3641;
+  margin-right: 20px;
 }
 
 .fa-search {
@@ -107,9 +108,7 @@ nav a:hover {
   margin: 20px 0;
 }
 
-.item1,
-.item2,
-.item3 {
+.point {
   font-family: "Zen Kaku Gothic Antique";
   font-size: 1, 5em;
   font-weight: 900;
@@ -125,7 +124,6 @@ nav a:hover {
 
 .sale {
   display: flex;
-  flex-wrap: wrap;
   width: 100%;
   margin-bottom: 50px;
 }
@@ -137,7 +135,6 @@ nav a:hover {
   background-position: bottom;
   width: 100%;
   position: relative;
-  z-index: 1;
 }
 
 .waterfall-image a {
@@ -171,7 +168,7 @@ nav a:hover {
   font-size: 2em;
   color: white;
   top: 70px;
-  right: 300px;
+  right: 150px;
 }
 
 .section-two {
@@ -181,11 +178,19 @@ nav a:hover {
   position: relative;
   flex-direction: row;
   min-height: 600px;
-  gap: 20px;
-  background-image: cover;
-  margin-bottom: 50px;
+  gap: 65px;
+  margin: 50px auto;
 }
 
+.men-jackets img {
+  width: 500px;
+  height: 600px;
+}
+
+.women-jackets img {
+  width: 500px;
+  height: 600px;
+}
 
 .men-jackets a {
   display: inline;
@@ -199,16 +204,6 @@ nav a:hover {
   position: absolute;
   bottom: 100px;
   right: 180px;
-}
-
-.men-jackets img {
-  width: 500px;
-  height: 600px;
-}
-
-.women-jackets img {
-  width: 500px;
-  height: 600px;
 }
 
 .section-two a:hover {
@@ -267,7 +262,6 @@ nav a:hover {
   display: flex;
   flex: flex-end;
   position: absolute;
-  padding: 0;
   font-family: "Zen Kaku Gothic Antique", sans-serif;
   font-size: 1em;
   width: 100%;
@@ -277,6 +271,7 @@ nav a:hover {
   top: 100px;
   height: 200px;
   margin-left: 50px;
+  margin-right: 0px;
 }
 
 .two-about {
