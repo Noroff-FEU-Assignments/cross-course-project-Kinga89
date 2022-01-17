@@ -16,14 +16,6 @@ main {
 }
 
 /*HEADER*/
-.logo {
-  background-image: url("../images/logo.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  max-width: 200px;
-  max-height: 60px;
-  margin: 10px;
-}
 
 header {
   position: fixed;
@@ -37,16 +29,28 @@ header {
 
 .nav-container {
   display: flex;
-  flex: 1; 
   align-items: center;
   justify-content: space-between;
 }
 
-.item {
+nav {
+  flex: 1;
+  justify-content: left;
+}
+
+.nav-section {
   display: inline-block;
-  margin: 10px 10px 0px 10px;
   padding: 10px;
   font-weight: 900;
+}
+
+.logo {
+  background-image: url("../images/logo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 200px;
+  max-height: 60px;
+  margin: 20px;
 }
 
 .item_logo {
@@ -56,12 +60,8 @@ header {
   position: relative;
 }
 
-nav {
-  align-items: center;
-}
 nav li {
-  display: inline;
-  align-items: center;
+  align-items: left;
 }
 
 nav a {
@@ -70,14 +70,15 @@ nav a {
   color: #0a3641;
 }
 
-
 nav a:hover {
   text-decoration: underline;
 }
 
 .icons {
+  display: inline-block;
   color: #0a3641;
   margin-right: 20px;
+  flex: flex-end;
 }
 
 .fa-search {
@@ -93,16 +94,15 @@ nav a:hover {
 }
 
 .spacer {
-  min-height: 130px;
+  min-height: 100px;
   width: 100%;
 }
 
 /*MAIN HOMEPAGE*/
 
 .section-one {
-  max-height: 100px;
+  max-height: 90px;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-around;
   margin: 20px 0;
