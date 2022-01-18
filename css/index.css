@@ -5,6 +5,14 @@
     format("woff2");
 }
 
+html {
+  box-sizing: border-box;
+}
+:before,
+:after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -20,7 +28,7 @@ main {
 header {
   position: fixed;
   width: 100%;
-  min-height: 100px;
+  max-height: 100px;
   z-index: 100;
   font-family: "Zen Kaku Gothic Antique";
   background-color: white;
@@ -55,7 +63,6 @@ nav {
 
 .item_logo {
   display: inline;
-
   padding: 5px;
   position: relative;
 }
@@ -122,88 +129,71 @@ nav a:hover {
   margin-left: 20px;
 }
 
-.sale {
-  display: flex;
+.sale-section {
+  margin: 0;
+  min-height: 70vh;
   width: 100%;
-  margin-bottom: 50px;
-}
-
-.waterfall-image {
   background-image: url(../images/Couple.by.waterfall.png);
   background-repeat: no-repeat;
-  min-height: 70vh;
   background-position: bottom;
-  width: 100%;
   position: relative;
 }
 
-.waterfall-image a {
+.sale-section a {
+  position: absolute;
   display: inline-block;
-  position: relative;
-  top: 180px;
-  left: 450px;
+  bottom: 200px;
+  left: 45%;
 }
 
-.waterfall-image a:hover {
+.sale-section a:hover {
   background-color: #c06a37;
   color: white;
 }
 
-.waterfall-image h1 {
-  position: absolute;
+.sale-text {
   font-family: "Zen Kaku Gothic Antique", sans-serif;
-  font-size: 2em;
+  font-size: 20px;
   color: white;
   text-transform: uppercase;
-  font-weight: 900;
-  display: inline-flex;
-  top: 0px;
-  right: 100px;
-}
-
-.waterfall-image p {
+  text-align: end;
+  margin-right: 30px;
   position: absolute;
-  display: inline-flex;
-  font-family: "Zen Kaku Gothic Antique", sans-serif;
-  font-size: 2em;
-  color: white;
-  top: 70px;
-  right: 150px;
+  right: 0;
 }
 
 .section-two {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+  margin: 30px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  gap: 3%;
+}
+
+.col-men {
+  background-image: url(../images/men.homepage.jpg);
+  background-repeat: no-repeat;
   position: relative;
-  flex-direction: row;
-  min-height: 600px;
-  gap: 65px;
-  margin: 50px auto;
+  background-size: cover;
 }
 
-.men-jackets img {
-  width: 500px;
-  height: 600px;
-}
-
-.women-jackets img {
-  width: 500px;
-  height: 600px;
-}
-
-.men-jackets a {
-  display: inline;
+.col-men a {
   position: absolute;
-  bottom: 100px;
-  left: 180px;
+  bottom: 20%;
+  left: 35%;
 }
 
-.women-jackets a {
-  display: inline;
+.col-women {
+  background-image: url(../images/women.homepage.jpg);
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+}
+
+.col-women a {
   position: absolute;
-  bottom: 100px;
-  right: 180px;
+  bottom: 20%;
+  left: 35%;
 }
 
 .section-two a:hover {
@@ -216,10 +206,9 @@ nav a:hover {
   color: #0a3641;
   font-family: "Zen Kaku Gothic Antique", sans-serif;
   text-decoration: none;
+  display: inline;
   border-radius: 15px;
   padding: 10px 20px 10px 20px;
-  display: inline-block;
-  margin-bottom: 10px;
   font-size: 1em;
   font-weight: bolder;
   text-transform: uppercase;
@@ -228,23 +217,21 @@ nav a:hover {
 }
 
 .section-three {
-  display: flex;
+  font-family: "Zen Kaku Gothic Antique";
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+  gap: 1%;
   min-height: 70vh;
-  margin-bottom: 50px;
-}
-
-.section-three > * {
-  flex: 1;
+  margin: 5% 0;
 }
 
 .text-box {
-  margin: 0px 50px 50px 20px;
-  display: flex;
+  margin: 0px;
   display: block;
-  max-width: 300px;
   text-align: center;
-  font-family: "Zen Kaku Gothic Antique";
   font-size: 1em;
+  margin-right: 2%;
 }
 
 .text-box h2 {
@@ -252,85 +239,64 @@ nav a:hover {
   font-weight: bolder;
 }
 
-.image-box {
-  position: relative;
-  text-align: center;
-  display: flex;
+.image-box-one {
+  background-image: url(../images/fabric.jpg);
+  background-repeat: no-repeat;
+  margin: 0;
+  background-size: cover;
+  min-height: 200px;
+  width: 100%;
+  align-self: center;
 }
 
-.about-image {
-  display: flex;
-  flex: flex-end;
-  position: absolute;
-  font-family: "Zen Kaku Gothic Antique", sans-serif;
-  font-size: 1em;
+.image-box-two {
+  display: row;
+  grid-template-rows: 1fr 1fr;
+  gap: 1%;
+  margin: 0px;
+  padding-bottom: 2%;
+}
+
+.industry-img {
+  background-image: url(../images/fashion.industry.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 200px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.design-img {
+  background-image: url(../images/clothing_design.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: bottom;
+  min-height: 200px;
   width: 100%;
 }
 
-.one-about {
-  top: 100px;
-  height: 200px;
-  margin-left: 50px;
-  margin-right: 0px;
-}
-
-.two-about {
-  width: 300px;
-  height: 200px;
-  bottom: 0px;
-  right: 0px;
-}
-
-.three-about {
-  top: 0px;
-  right: 0px;
-  width: 300px;
-  height: 200px;
-}
-
-.image-title-one {
-  position: absolute;
-  top: 0px;
-  padding: 0 5;
-  width: 300px;
-}
-
-.image-title-one p {
-  background-color: white;
-  padding: 10px;
-  box-shadow: 2px black;
+.image-box-one p {
+  margin: 0;
+  background-color: #fff;
   box-shadow: 0 0 1px black;
+  padding: 2%;
+  text-align: center;
 }
 
-.image-title-two {
-  position: absolute;
-  height: 200px;
-  bottom: 0px;
-  right: 0px;
-  padding: 0 5;
-  width: 300px;
-}
-
-.image-title-two p {
-  background-color: white;
-  padding: 10px;
+.industry-img p {
+  margin: 0;
+  background-color: #fff;
   box-shadow: 0 0 1px black;
+  padding: 2%;
+  text-align: center;
 }
 
-.image-title-three {
-  position: absolute;
-  height: 200px;
-  bottom: 0px;
-  right: 0px;
-  padding: 0 5;
-  width: 300px;
-  display: inline;
-}
-
-.image-title-three p {
-  background-color: white;
-  padding: 10px;
+.design-img p {
+  margin-bottom: 0;
+  background-color: #fff;
   box-shadow: 0 0 1px black;
+  padding: 2%;
+  text-align: center;
 }
 
 /*FOOTER*/
@@ -424,4 +390,112 @@ ul li {
   line-height: normal;
   font-size: 0, 5rem;
   text-decoration: underline;
+}
+
+/*MEDIA QUERIES*/
+
+/*responsive for mobile devices*/
+
+@media screen and (max-width: 799px) {
+  main {
+    margin: 0 0;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .fa-user-circle,
+  .fa-shopping-basket {
+    display: none;
+  }
+
+  .nav-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-items: center;
+    align-content: center;
+  }
+
+  .fa-search {
+    font-size: 150%;
+  }
+
+  .fa-bars {
+    padding: 10px;
+  }
+
+  .section-one {
+    display: none;
+  }
+
+  .point {
+    font-size: 1em;
+    font-weight: 900;
+  }
+
+  .sale-section a {
+    bottom: 45%;
+    left: 40%;
+  }
+
+  .sale-text {
+    font-size: 20px;
+    text-align: right;
+    right: 20px;
+  }
+
+  .section-two {
+    margin: 30px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 50vh;
+    gap: 3%;
+  }
+
+  .col-men {
+    background-position-y: center;
+  }
+
+  .col-men a,
+  .col-women a {
+    width: 20%;
+  }
+
+  .new-section-one {
+    min-height: 90px;
+    background-color: rgb(83, 83, 83);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+  }
+
+  .point {
+    font-family: "Zen Kaku Gothic Antique";
+    font-size: 1em;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  .fa-truck,
+  .fa-cube,
+  .fa-undo {
+    margin: 5%;
+  }
+
+  .section-three {
+    border: red solid 2px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .fa-bars,
+  .fa-truck,
+  .fa-cube,
+  .fa-undo,
+  .point {
+    display: none;
+  }
 }
