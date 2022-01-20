@@ -304,7 +304,7 @@ footer {
   padding-top: 5px;
   padding-bottom: 5px;
   margin-top: 20px;
-  height: 200px;
+  max-height: 200px;
   width: 100%;
 }
 
@@ -317,7 +317,6 @@ footer {
 .address {
   margin: 0px;
   display: flex;
-  flex: 30%;
   max-width: 500px;
   text-align: left;
   padding-left: 50px;
@@ -353,7 +352,6 @@ ul li {
 
 .footer-nav-one {
   display: flex;
-  flex: 30%;
   max-width: 500px;
   margin: 0px;
   text-align: left;
@@ -365,7 +363,6 @@ ul li {
 }
 
 .footer-nav-two {
-  flex: 30%;
   margin: 0px;
   display: flex;
   max-width: 500px;
@@ -453,7 +450,6 @@ ul li {
     background-position: center;
   }
 
-
   .col-men a,
   .col-women a {
     width: 20%;
@@ -509,10 +505,27 @@ ul li {
 
   footer {
     min-height: 200px;
+    margin: 0;
+    padding: 0;
   }
 
   .footer-items {
     display: none;
+  }
+
+  .footer-nav-one,
+  .footer-nav-two {
+    display: none;
+  }
+
+  .flex-container-footer {
+    justify-content: flex-start;
+    align-content: left;
+  }
+
+  .address {
+    padding-left: 0;
+    flex: 1;
   }
 }
 
