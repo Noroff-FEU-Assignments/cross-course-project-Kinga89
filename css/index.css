@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Open Sans", sans-serif;
-  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-family: "Zen Kaku Gothic Antique", sans-serif, "Open Sans", sans-serif,
+    Verdana, Tahoma, sans-serif;
   src: url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Zen+Kaku+Gothic+Antique&display=swap")
     format("woff2");
 }
@@ -16,7 +16,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Zen Kaku Gothic Antique", "Open Sans", "Arial" "sans-serif";
+  font-family: "Zen Kaku Gothic Antique", sans-serif, "Open Sans", sans-serif,
+    Verdana, Tahoma, sans-serif;
 }
 
 main {
@@ -30,7 +31,6 @@ header {
   width: 100%;
   max-height: 100px;
   z-index: 100;
-  font-family: "Zen Kaku Gothic Antique";
   background-color: white;
   box-shadow: 0 0 4px black;
 }
@@ -116,7 +116,6 @@ nav a:hover {
 }
 
 .point {
-  font-family: "Zen Kaku Gothic Antique";
   font-size: 1, 5em;
   font-weight: 900;
   text-transform: uppercase;
@@ -152,7 +151,6 @@ nav a:hover {
 }
 
 .sale-text {
-  font-family: "Zen Kaku Gothic Antique", sans-serif;
   font-size: 20px;
   color: white;
   text-transform: uppercase;
@@ -204,7 +202,6 @@ nav a:hover {
 .cta-button {
   background-color: white;
   color: #0a3641;
-  font-family: "Zen Kaku Gothic Antique", sans-serif;
   text-decoration: none;
   display: inline;
   border-radius: 15px;
@@ -217,11 +214,10 @@ nav a:hover {
 }
 
 .section-three {
-  font-family: "Zen Kaku Gothic Antique";
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   position: relative;
-  gap: 1%;
+  gap: 5%;
   min-height: 70vh;
   margin: 5% 0;
 }
@@ -229,7 +225,7 @@ nav a:hover {
 .text-box {
   margin: 0px;
   display: block;
-  text-align: center;
+  text-align: left;
   font-size: 1em;
   margin-right: 2%;
 }
@@ -237,6 +233,7 @@ nav a:hover {
 .text-box h2 {
   margin-top: 10px;
   font-weight: bolder;
+  text-align: center;
 }
 
 .image-box-one {
@@ -453,8 +450,9 @@ ul li {
   }
 
   .col-men {
-    background-position-y: center;
+    background-position: center;
   }
+
 
   .col-men a,
   .col-women a {
@@ -467,21 +465,14 @@ ul li {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: 50px 0;
+    margin: 0px 0px 30px;
   }
 
   .point {
-    font-family: "Zen Kaku Gothic Antique";
     font-size: 1em;
-    font-weight: 900;
     text-transform: uppercase;
     color: #fff;
-  }
-
-  .fa-truck,
-  .fa-cube,
-  .fa-undo {
-    margin: 5%;
+    margin: 0 3%;
   }
 
   .section-three {
@@ -491,7 +482,7 @@ ul li {
 
   .text-box {
     flex-basis: auto;
-    margin: 0px 20px 20px 30px;
+    margin: 0px 20px 30px;
   }
 
   .image-box-one {
@@ -503,11 +494,15 @@ ul li {
   }
 
   .industry-img {
-    padding-bottom: 0;
+    margin-bottom: 0px;
   }
 
   .design-img {
     background-position: center;
+  }
+
+  .design-img p {
+    margin-top: 0px;
   }
 
   /*footer*/
