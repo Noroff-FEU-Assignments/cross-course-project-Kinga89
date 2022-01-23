@@ -624,20 +624,13 @@ left: 45%;
   }
 
   .form-wrapper {
-    color: #fff;
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    text-align: left;
     top: 25%;
-    left: 30%;
+    left: 25%;
   }
   
   .form-wrapper > * {
     padding: 10px;
     border-radius: 5%;
-    width: 200px;
-    text-align: center;
   }
   
   .signin-button {
