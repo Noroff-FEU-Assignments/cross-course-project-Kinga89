@@ -169,17 +169,17 @@ nav a:hover {
   background-size: cover;
 }
 
-.col-men a {
-  position: absolute;
-  bottom: 20%;
-  left: 35%;
-}
-
 .col-women {
   background-image: url(../images/women.homepage.jpg);
   background-repeat: no-repeat;
   position: relative;
   background-size: cover;
+}
+
+.col-men a {
+  position: absolute;
+  bottom: 20%;
+  left: 35%;
 }
 
 .col-women a {
@@ -294,95 +294,132 @@ footer {
   background-color: #0a3641;
   font-family: "Open Sans", sans-serif;
   color: white;
-  text-align: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-top: 20px;
-  max-height: 200px;
+  max-height: 300px;
   width: 100%;
 }
 
 .flex-container-footer {
   display: flex;
   justify-content: space-around;
-  align-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .address {
-  margin: 0px;
-  display: flex;
-  max-width: 500px;
-  text-align: left;
-  padding-left: 50px;
+  margin-left: 30px;
 }
 
 .address h2 {
-  margin-left: 60px;
-}
-
-ul li {
-  display: block;
-  text-align: left;
-  list-style-type: none;
-  line-height: normal;
-  font-size: 0, 5rem;
-}
-
-.address > * {
-  flex: 1;
-}
-
-.fa-envelope {
-  margin-right: 10px;
-}
-
-.fa-home {
-  margin-right: 10px;
+  margin-left: 30px;
+  padding-bottom: 5px;
 }
 
 .address_list {
   margin-left: 30px;
 }
 
+.address p {
+  line-height: 10px;
+}
+
+.fa-envelope, .fa-home  {
+  margin-right: 10px;
+}
+
 .footer-nav-one {
-  display: flex;
-  max-width: 500px;
   margin: 0px;
   text-align: left;
   padding-left: 0;
+  line-height: normal;
 }
 
-.footer-nav-one > * {
-  flex: 1;
-}
 
 .footer-nav-two {
   margin: 0px;
-  display: flex;
-  max-width: 500px;
-  text-align: left;
+  max-width: 300px;
   padding-left: 0;
-  padding-right: 50px;
 }
 
-.footer-nav-two > * {
-  flex: 1;
-}
 
 .footer-nav-items {
   display: block;
   margin-top: 70px;
   text-align: left;
   list-style-type: none;
-  line-height: normal;
   font-size: 0, 5rem;
   text-decoration: underline;
 }
+
+
+.social-media {
+ margin: 30px 30px 0 0;
+ text-align: left;
+}
+
+.fa-facebook, .fa-instagram {
+  padding: 0 10px;
+  font-size: 30px;
+}
+
+
+/*SIGN IN PAGE*/
+.signin-background {
+  background-image: url(../images/signin.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 600px;
+  width: 100%;
+  position: relative;
+  margin: 0;
+}
+
+.sign-title {
+color: #fff;
+font-size: 3em;
+font-weight: bolder;
+position: absolute;
+top: 15%;
+left: 45%;
+}
+
+.signin-form {
+  font-family: "Zen Kaku Gothic Antique", sans-serif, "Open Sans", sans-serif,
+  Verdana, Tahoma, sans-serif;
+}
+
+.form-wrapper {
+  color: #fff;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  text-align: left;
+  top: 35%;
+  left: 40%;
+}
+
+.form-wrapper > * {
+  padding: 10px;
+  border-radius: 5%;
+  width: 250px;
+}
+
+.signin-button {
+  margin-top: 40px;
+  text-align: center;
+}
+
+
+
+
+
+
 
 /*MEDIA QUERIES*/
 
 /*responsive for mobile devices*/
 
+/*--------------------HOMEPAGE------------------------*/
 @media screen and (max-width: 799px) {
   main {
     margin: 0 0;
@@ -391,7 +428,7 @@ ul li {
   nav {
     display: none;
     position: fixed;
-    top: 14%;
+    top: 12%;
     left: -40px;
   }
 
@@ -407,11 +444,7 @@ ul li {
     display: block;
     background-color: #fff;
   }
-
-  .fa-user-circle,
-  .fa-shopping-basket {
-    display: none;
-  }
+  
 
   .nav-container {
     display: grid;
@@ -420,8 +453,12 @@ ul li {
     align-content: center;
   }
 
-  .fa-search {
-    font-size: 150%;
+  .item_logo {
+    left: 40px;
+  }
+
+  .fa-search, .fa-user-circle, .fa-shopping-basket, .fa-bars {
+    font-size: 120%;
   }
 
   .fa-bars {
@@ -464,6 +501,10 @@ ul li {
   .col-women a {
     width: 20%;
   }
+
+.col-women .cta-button {
+    padding-right: 30px;
+}
 
   .new-section-one {
     min-height: 100px;
@@ -519,25 +560,21 @@ ul li {
     padding: 0;
   }
 
-  .footer-items {
+  .footer-nav-one, .footer-nav-two {
     display: none;
   }
 
-  .footer-nav-one,
-  .footer-nav-two {
-    display: none;
-  }
-
-  .flex-container-footer {
-    justify-content: flex-start;
-    align-content: left;
-  }
 
   .address {
-    padding-left: 0;
-    flex: 1;
+    margin: 0 10px;
   }
+
+  .social-media {
+    margin: 20px 20px 0 0;
+    text-align: left;
+   }
 }
+
 
 @media screen and (min-width: 800px) {
   .new-section-one {
@@ -557,3 +594,39 @@ ul li {
     display: none;
   }
 }
+
+
+
+/*--------------------SIGN INN------------------------*/
+@media screen and (max-width: 799px){
+.sign-title {
+  font-size: 2em;
+  top: 15%;
+  left: 40%;
+  }
+
+  .form-wrapper {
+    color: #fff;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    text-align: left;
+    top: 30%;
+    left: 30%;
+  }
+  
+  .form-wrapper > * {
+    padding: 10px;
+    border-radius: 5%;
+    width: 200px;
+  }
+  
+  .signin-button {
+    margin-top: 40px;
+    left: 40%;
+  }
+
+}
+
+
+

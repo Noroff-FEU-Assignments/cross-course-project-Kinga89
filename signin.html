@@ -30,7 +30,6 @@
         <li class="nav-section"><a href="help.html">Help</a></li> 
         </ul>
        </nav>
-   
     <div class="icons">
       <i class="fas fa-search"></i>
       <a href="signin.html"><i class="far fa-user-circle"></i></a>
@@ -38,10 +37,27 @@
     </div>
   </div>
 </header>
-    <div class="spacer">&nbsp;</div>
-<main>
+    <div class="spacer-signin">&nbsp;</div>
+<main class="signin-background">
+    <h1 class="sign-title">Sign in</h1>
 
-
+<section class="signin-form">
+<form method="post">
+    <div class="form-wrapper">
+        <label for="email"> Email:</label>
+        <input type="text" name="email">
+        <label for="fullname"> Password:</label>
+        <input type="text" name="password">
+    <div>
+     <input type="checkbox" name="signup" value="signup" id="signup"><label for="signup">Sign up for our newsletter</label>
+    </div>
+                
+   <div class="signin-button">
+    <input type="submit" value="Sign in" class="cta-button">
+    </div>
+    </form>
+</div>
+</section>
 
 
 
