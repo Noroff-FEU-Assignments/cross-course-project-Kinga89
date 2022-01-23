@@ -17,6 +17,13 @@ main {
   margin: 0 100px;
 }
 
+.current {
+  text-decoration: underline;
+}
+
+
+/*--------------------HOMEPAGE------------------------*/
+
 /*HEADER*/
 
 header {
@@ -44,6 +51,7 @@ nav {
   padding: 10px;
   font-weight: 900;
 }
+
 
 .logo {
   background-image: url("../images/logo.png");
@@ -73,6 +81,8 @@ nav a {
 nav a:hover {
   text-decoration: underline;
 }
+
+
 
 .icons {
   display: inline-block;
@@ -221,11 +231,10 @@ nav a:hover {
   display: block;
   text-align: left;
   font-size: 1em;
-  margin-right: 2%;
+  
 }
 
 .text-box h2 {
-  margin-top: 10px;
   font-weight: bolder;
   text-align: center;
 }
@@ -264,9 +273,10 @@ nav a:hover {
   background-position-y: bottom;
   min-height: 200px;
   width: 100%;
+  margin-top: 50px;
 }
 
-.image-box-one p {
+.image-box-one p, .industry-img p, .design-img p {
   margin: 0;
   background-color: #fff;
   box-shadow: 0 0 1px black;
@@ -274,20 +284,7 @@ nav a:hover {
   text-align: center;
 }
 
-.industry-img p {
-  margin: 0;
-  background-color: #fff;
-  box-shadow: 0 0 1px black;
-  padding: 2%;
-  text-align: center;
-}
 
-.design-img p {
-  background-color: #fff;
-  box-shadow: 0 0 1px black;
-  padding: 2%;
-  text-align: center;
-}
 
 /*FOOTER*/
 footer {
@@ -362,7 +359,7 @@ footer {
 }
 
 
-/*SIGN IN PAGE*/
+/*--------------------SIGN INN PAGE------------------------*/
 .signin-background {
   background-image: url(../images/signin.jpg);
   background-repeat: no-repeat;
@@ -429,6 +426,45 @@ left: 45%;
 }
 
 
+
+
+/*--------------------ABOUT PAGE------------------------*/
+.main-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+}
+
+.text-box-about {
+  flex-basis: auto;
+  margin-top: 50px;
+  padding: 0 20px;
+}
+
+.text-box-about h2 {
+  text-align: center;
+}
+
+.image-box-one {
+  background-position: 0vw;
+  margin-top: 30px;
+}
+
+.industry-img {
+  margin-bottom: 0px;
+}
+
+.design-img {
+  background-position: center;
+}
+
+.design-img2 {
+  margin: 0px 0px 30px 0px;
+}
+
+.design-img p {
+  margin-top: 0px;
+}
 
 
 
@@ -564,6 +600,7 @@ left: 45%;
 
   .design-img {
     background-position: center;
+    margin-top: 0;
   }
 
   .design-img p {
@@ -639,6 +676,28 @@ left: 45%;
   }
 
 }
+
+
+/*--------------------ABOUT------------------------*/
+@media screen and (max-width: 799px){
+  
+  .main-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .text-box-about {
+    flex-basis: 100%;
+    margin-top: 20px;
+  }
+
+.box-wrapper {
+  flex-basis: 100%;
+}
+
+}
+
+
 
 
 
