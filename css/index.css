@@ -467,7 +467,103 @@ left: 45%;
 }
 
 
+/*--------------------WOMEN SECTION------------------------*/
 
+.jackets {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+
+.all-jackets {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  margin-bottom: 30px;
+}
+
+.product {
+  line-height: 15px;
+  background-color: #F0F0F0;
+}
+
+.product img {
+  width: 100%;
+  height: 50vh;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  object-position: cover;
+}
+
+.product p {
+  margin: 5px 0px;
+}
+
+.colors {
+  font-size: 13px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.colors h2 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.colors i {
+  font-size: 16px;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.yellow {
+  color: #E3B929;
+}
+
+.red {
+  color: #DD0A16;
+}
+
+.navy {
+  color: #0A3641;
+}
+
+.light-blue {
+  color: #759EBD;
+}
+
+.dark-green {
+  color: #55735D;
+}
+
+.orange {
+  color:#C06A37;
+}
+
+.light-brown {
+  color: #BB7A38;
+}
+
+.blue {
+  color:#405B98;
+}
+
+.green {
+  color: #36A55C;
+}
+
+.olive {
+  color: #70642A;
+}
+
+.light-grey {
+  color: #C4C4C4;
+}
+
+.pink {
+  color: #C77EA7;
+}
 
 /*MEDIA QUERIES*/
 
