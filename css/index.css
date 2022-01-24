@@ -645,7 +645,6 @@ color: #1277D2;
   color:black;
 }
 
-
 .size-dropdown:hover .dropdown ul li:hover {
   background: #0A3641;
   padding: 3px;
@@ -653,6 +652,14 @@ color: #1277D2;
 
 .size-dropdown:hover .dropdown ul li a:hover {
   color: #fff;
+}
+
+label {
+  margin-left: 20px;
+}
+
+select {
+  margin: 5px;
 }
 
 
@@ -836,8 +843,6 @@ color: #1277D2;
   }
 }
 
-
-
 /*--------------------SIGN INN------------------------*/
 @media screen and (max-width: 799px){
 .sign-title {
@@ -920,4 +925,27 @@ color: #1277D2;
   .colors p {
     font-size: 10px;
   }
+}
+
+/*--------------------WOMEN AND MEN PRODUCT DETAILS------------------------*/
+@media screen and (max-width: 799px) {
+.size-dropdown {
+  display: none;
+}
+
+.product-wrapper {
+    margin: 20px 20px;
+}
+
+.product_images img {
+  margin-bottom: 2px;
+}
+
+.price {
+  font-size: 20px;
+}
+
+
+
+
 }
