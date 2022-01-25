@@ -48,7 +48,6 @@ h3 {
 
 .small-button {
   font-size: 10px;
-  font-weight: bolder;
 }
 
 .price {
@@ -58,7 +57,6 @@ h3 {
 }
 
 /*--------------------HOMEPAGE------------------------*/
-
 
 /*MAIN HOMEPAGE*/
 
@@ -207,7 +205,6 @@ h3 {
   padding: 2%;
   text-align: center;
 }
-
 
 /*--------------------SIGN INN PAGE------------------------*/
 .signin-background {
@@ -522,12 +519,14 @@ select {
 }
 
 /*--------------------CHECKOUT PAGE WOMEN & MEN------------------------*/
-.checkout-page-wrapper h1, .payment-page-wrapper h1 {
+.checkout-page-wrapper h1,
+.payment-page-wrapper h1 {
   display: inline-block;
   margin-left: 40%;
 }
 
-.checkout-page-wrapper, .payment-page-wrapper {
+.checkout-page-wrapper,
+.payment-page-wrapper {
   margin: 0 auto;
   max-width: 1000px;
 }
@@ -575,34 +574,42 @@ select {
 
 /*-------------------PAYMENT-DETAILS-----------------------*/
 .payment-page-wrapper {
-  margin: 0 auto;
+  margin: 0 auto 50px;
   max-width: 1000px;
 }
 
-.payment-wrapper {
-  display: flex;
+.payment-page-wrapper h1 {
   margin-bottom: 50px;
 }
 
-.payment-choice, .shipping-address2{
-  flex: 1;
-  border: red solid 2px;
+.payment-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-bottom: 50px;
+  grid-gap: 20px;
 }
 
 .shipping-address2 {
-line-height: 10px;
+  box-shadow: #707070 0 0 5px;
+  border-radius: 5%;
+  padding: 30px;
 }
 
-.shipping-address2 h2, .payment-wrapper {
-margin-top: 0;
+.shipping-address2 {
+  line-height: 15px;
+  text-align: left;
 }
 
 .cards {
+  display: flex;
+  justify-content: space-between;
   font-size: 150%;
   margin-bottom: 10px;
 }
 
-
+.payment-page-wrapper a{
+ margin-left: 80%; 
+}
 
 /*MEDIA QUERIES*/
 
