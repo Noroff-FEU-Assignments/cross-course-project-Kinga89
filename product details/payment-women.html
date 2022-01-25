@@ -11,8 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Zen+Kaku+Gothic+Antique&display=swap"
     rel="stylesheet" />
-  <link href="../css/index.css" rel="stylesheet"/>
-  <link href="../css/header.footer.css" rel="stylesheet"/>
+  <link href="../css/index.css" rel="stylesheet" />
+  <link href="../css/header.footer.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -24,6 +24,7 @@
           <img src="../images/logo.png" class="logo" alt="logo Rainy Days" />
         </a>
       </div>
+
       <input type="checkbox" id="hamburger-menu" />
       <nav>
         <ul>
@@ -45,49 +46,42 @@
     </div>
   </header>
   <div class="spacer">&nbsp;</div>
-  <main class="page-wrapper">
+  <main class="payment-page-wrapper">
     <i class="fas fa-arrow-left"></i>
-    <section class="product-wrapper">
-      <div class="product_images">
-        <img src="../images/Men/men1.jpg" />
-        <img src="../images/Men/detail-men1.jpg" />
-        <img src="../images/Men/detail-men2.jpg" />
-      </div>
-      <div class="product_description">
-        <h2>Mark</h2>
-        <p>Long raincoat</p>
-        <div class="colors">
-          <p>Yellow <i class="fas fa-circle yellow"></i></p>
-          <p>Red <i class="fas fa-circle red"></i></p>
-          <p>Navy <i class="fas fa-circle navy"></i></p>
-        </div>
-        <p class="price">$120</p>
-        <div class="button wrapper">
-          <a href="checkout-men.html" class="cta-button small-button">Add to cart</a>
-          <div class="size-submenu">
-            <label for="size">Choose your size</label>
-            <select id="size" name="size">
-              <option value="XS"><a href="checkout-men.html"></a>XS</option>
-              <option value="S"><a href="checkout-men.html"></a>S</option>
-              <option value="M"><a href="checkout-men.html"></a>M</option>
-              <option value="L"><a href="checkout-men.html"></a>L</option>
-              <option value="XL"><a href="checkout-men.html"></a>XL</option>
-            </select>
-          </div>
-        </div>
-        <div class="product-text">
-          <p><i class="far fa-check-square green"></i>In stock</p>
-          <h3>Product description</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua.
-          </p>
-          <h3>Material & care advice</h3>
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+    <h1>Payment method</h1>
+    
+    <section class="payment-wrapper">
+        <div class="payment-choice">
+          <div class="cards">
+          <input type="checkbox" name="visa" value="visa" id="visa" /><label for="visa"><i
+              class="fab fa-cc-visa"></i></label>
+          <input type="checkbox" name="mastercard" value="mastercard" id="mastercard" /><label for="mastercard"><i
+              class="fab fa-cc-mastercard"></i></label>
+          <input type="checkbox" name="paypal" value="paypal" id="paypal" /><label for="paypal"><i
+              class="fab fa-cc-paypal"></i></label>
+            </div>
+        <div class="form-wrapper2">
+          <label for="card number">Card number:</label>
+          <input type="text" name="card number" />
+          <label for="expiry date">Expiry date:</label>
+          <input type="text" name="expiry date" />
+          <label for="name">Name on card</label>
+          <input type="text" name="name" />
+          <label for="CVC">CVC code:</label>
+          <input type="text" name="CVC" />
         </div>
       </div>
+          <div class="shipping-address2">
+          <h2>Shipping address</h2>
+          <p>Mary McDonald</p>
+          <p>Kongens gate 26</p>
+          <p>1234 Kristiansand</p>
+          <p>Norway</p>
+          <a href="../product details/summary-women.html" class="cta-button small-button">Continue to checkout</a>
+        </div>
     </section>
+
+
   </main>
   <footer>
     <div class="flex-container-footer">
@@ -121,6 +115,7 @@
           </ul>
         </nav>
       </section>
+
       <section class="social-media">
         <i class="fab fa-facebook"></i>
         <i class="fab fa-instagram"></i>
