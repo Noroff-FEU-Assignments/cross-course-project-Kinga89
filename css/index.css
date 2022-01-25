@@ -390,7 +390,6 @@ footer {
 }
 
 .form-wrapper {
-  color: #fff;
   display: flex;
   position: absolute;
   flex-direction: column;
@@ -399,6 +398,7 @@ footer {
 }
 
 .form-wrapper > * {
+  color: #fff;
   padding: 10px;
   border-radius: 5%;
   width: 250px;
@@ -599,7 +599,7 @@ footer {
 
 .product_images img {
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .product_images img:last-child {
@@ -694,14 +694,19 @@ select {
 }
 
 .form-wrapper2 {
-  width: 200px;
+  width: 250px;
   display: flex;
   flex-direction: column;
+}
+
+.form-wrapper2 input {
+  border-radius: 5px;
 }
 
 .order-summary h2 {
   margin-top: 0;
   padding-top: 0;
+  text-decoration: underline;
 }
 
 .order-summary p {
@@ -711,11 +716,11 @@ select {
 .order-summary p:last-child {
   line-height: 25px;
   font-size: 25px;
+  font-weight: bold;
 }
 
 .form-wrapper2 .small-button {
   margin-top: 30px;
-  margin-left: 40%;
 }
 
 /*MEDIA QUERIES*/
@@ -756,14 +761,20 @@ select {
   }
 
   .item_logo {
-    left: 40px;
+    left: 15%;
+  }
+
+  .fa-search,
+  .fa-user-circle,
+  .fa-shopping-basket {
+    margin-right: 1px;
   }
 
   .fa-search,
   .fa-user-circle,
   .fa-shopping-basket,
   .fa-bars {
-    font-size: 120%;
+    font-size: 100%;
   }
 
   .fa-bars {
@@ -864,6 +875,7 @@ select {
     min-height: 200px;
     margin: 0;
     padding: 0;
+    font-size: 12px;
   }
 
   .footer-nav-one,
@@ -947,7 +959,8 @@ select {
     margin: 0 20px;
   }
 
-  .all-jackets {
+  .all-jackets,
+  .checkout-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -962,6 +975,10 @@ select {
   .product {
     line-height: 10px;
     font-size: 1em;
+  }
+
+  .product_description {
+    font-size: 12px;
   }
 
   .product img {
@@ -1001,8 +1018,12 @@ select {
     margin: 20px 20px;
   }
 
+  .product-text i {
+    margin-left: 0;
+  }
+
   .product_images img {
-    margin-bottom: 2px;
+    margin-bottom: 10px;
   }
 
   .price {
@@ -1020,10 +1041,68 @@ select {
 
   .size-submenu {
     margin-top: 25px;
-    margin-left: 5px;
+    margin-left: 0px;
   }
 
   label {
     margin-left: 0;
+  }
+}
+
+/*--------------------CHECKOUT PAGE WOMEN & MEN------------------------*/
+@media screen and (max-width: 799px) {
+  .checkout-page-wrapper i {
+    margin-left: 20px;
+  }
+
+  .order-summary h2 {
+    font-size: 13px;
+  }
+
+  .checkout-page-wrapper h1 {
+    margin-left: 30%;
+    font-size: 20px;
+  }
+
+  .checkout-wrapper {
+    display: grid;
+    margin: 10px 20px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  .checkout-image {
+    max-width: 200px;
+  }
+
+  .order-summary p {
+    line-height: 5px;
+    font-size: 10px;
+  }
+
+  .order-summary p:last-child {
+    line-height: 10px;
+    font-size: 12px;
+  }
+
+  .form-wrapper2 {
+    margin-left: 20%;
+  }
+
+  .form-wrapper2 input {
+    border-radius: 5px;
+    height: 20px;
+    max-width: 200px;
+  }
+
+  .form-wrapper2 .small-button {
+    margin-top: 30px;
+    margin-left: 10%;
+  }
+
+  .shipping-address {
+    margin-top: 20px;
   }
 }
