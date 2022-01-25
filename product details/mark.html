@@ -50,7 +50,8 @@
       </div>
     </header>
     <div class="spacer">&nbsp;</div>
-    <main>
+    <main class="page-wrapper">
+					<i class="fas fa-arrow-left"></i>
       <section class="product-wrapper">
         <div class="product_images">
           <img src="../images/Men/men1.jpg" />
@@ -66,9 +67,10 @@
             <p>Navy <i class="fas fa-circle navy"></i></p>
           </div>
           <p class="price">$120</p>
-          <div>
-            <a href="checkout-men.html" class="cta-button">Add to cart</a>
-            <label for="size">Choose your size</label>
+          <div class="button wrapper">
+            <a href="checkout-men.html" class="cta-button small-button">Add to cart</a>
+           <div class="size-submenu">
+												<label for="size">Choose your size</label>
             <select id="size" name="size">
               <option value="XS"><a href="checkout-men.html"></a>XS</option>
               <option value="S"><a href="checkout-men.html"></a>S</option>
@@ -76,6 +78,7 @@
               <option value="L"><a href="checkout-men.html"></a>L</option>
               <option value="XL"><a href="checkout-men.html"></a>XL</option>
             </select>
+											</div>
           </div>
           <div>
             <p><i class="far fa-check-square green"></i>In stock</p>

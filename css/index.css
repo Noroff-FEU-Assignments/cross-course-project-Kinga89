@@ -578,10 +578,14 @@ color: #1277D2;
 }
 
 /*--------------------WOMEN AND MEN PRODUCT DETAILS------------------------*/
+.page-wrapper {
+margin-top: 20px;
+}
+
 .product-wrapper {
   display: flex;
   max-width: 1000px;
-  margin: 50px 0px;
+  margin: 20px 0px;
 }
 
 .product_images {
@@ -654,7 +658,12 @@ color: #1277D2;
   color: #fff;
 }
 
-label {
+.button-wrapper a {
+display: inline-block;
+}
+
+.size-submenu {
+  display: inline-block;
   margin-left: 20px;
 }
 
@@ -929,6 +938,16 @@ select {
 
 /*--------------------WOMEN AND MEN PRODUCT DETAILS------------------------*/
 @media screen and (max-width: 799px) {
+
+.page-wrapper i {
+  margin-left: 20px;
+}
+  
+.colors i {
+  font-size: 13px;
+  margin-left: 2px;
+}
+
 .size-dropdown {
   display: none;
 }
@@ -945,7 +964,23 @@ select {
   font-size: 20px;
 }
 
+.product_images {
+  margin: 0 30px 0 0;
+}
 
+.button-wrapper {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.size-submenu {
+  margin-top: 25px;
+  margin-left: 5px;
+}
+
+label {
+  margin-left: 0;
+}
 
 
 }
