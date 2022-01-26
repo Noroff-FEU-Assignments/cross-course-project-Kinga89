@@ -1,4 +1,4 @@
-/*HEADER*/
+/*HEADER (desktop)*/
 header {
     position: fixed;
     width: 100%;
@@ -79,7 +79,7 @@ header {
   }
   
 
-  /*FOOTER*/
+  /*FOOTER (desktop)*/
 footer {
     background-color: #0a3641;
     font-family: "Open Sans", sans-serif;
@@ -150,3 +150,67 @@ footer {
     font-size: 30px;
   }
   
+
+   /*======HEADER=========*/
+  @media screen and (max-width: 799px) {
+  nav {
+      display: none;
+      position: fixed;
+      top: 12%;
+      left: -40px;
+    }
+  
+    #hamburger-menu {
+      display: none;
+    }
+  
+    #hamburger-menu:checked ~ nav {
+      display: block;
+    }
+  
+    .nav-section {
+      display: block;
+      background-color: #fff;
+    }
+  
+    .nav-container {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      justify-items: center;
+      align-content: center;
+    }
+
+    .logo {
+        max-width: 100px;
+        max-height: 40px;
+        }
+  
+    .item_logo {
+      left: 15%;
+    }
+  
+    .fa-search,
+    .fa-user-circle,
+    .fa-shopping-basket {
+      margin-right: 1px;
+    }
+  
+    .fa-search,
+    .fa-user-circle,
+    .fa-shopping-basket,
+    .fa-bars {
+      font-size: 100%;
+    }
+  
+    .fa-bars {
+      margin-left: 20px;
+    }
+
+    .spacer {
+        min-height: 90px;
+      }
+}
+
+
+
+

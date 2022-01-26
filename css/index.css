@@ -584,15 +584,21 @@ select {
 
 .payment-wrapper {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 50px;
-  grid-gap: 20px;
+  grid-gap: 30px;
+}
+
+.delivery-options {
+  margin: 0 20px;
 }
 
 .shipping-address2 {
   box-shadow: #707070 0 0 5px;
   border-radius: 5%;
   padding: 30px;
+  padding: 10px;
+  max-width: 300px;
 }
 
 .shipping-address2 {
@@ -607,8 +613,8 @@ select {
   margin-bottom: 10px;
 }
 
-.payment-page-wrapper a{
- margin-left: 80%; 
+.payment-page-wrapper a {
+  margin-left: 80%;
 }
 
 /*MEDIA QUERIES*/
@@ -678,26 +684,29 @@ select {
     font-weight: 900;
   }
 
+  .sale-section {
+    min-height: 50vh;
+  }
+
   .sale-section a {
-    bottom: 45%;
-    left: 40%;
+    left: 30%;
   }
 
   .sale-text {
     font-size: 20px;
     text-align: right;
-    right: 20px;
   }
 
   .section-two {
-    margin: 30px 0px;
+    margin: 30px 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: 50vh;
+    min-height: 30vh;
     gap: 3%;
   }
 
-  .col-men {
+  .col-men,
+  .col-women {
     background-position: center;
   }
 
@@ -870,7 +879,7 @@ select {
   }
 
   .product img {
-    height: 30vh;
+    height: 20vh;
   }
 
   .product h2 {
@@ -975,10 +984,6 @@ select {
     font-size: 12px;
   }
 
-  .form-wrapper2 {
-    margin-left: 20%;
-  }
-
   .form-wrapper2 input {
     border-radius: 5px;
     height: 20px;
@@ -992,5 +997,52 @@ select {
 
   .shipping-address {
     margin-top: 20px;
+  }
+}
+
+/*--------------------PAYMENT------------------------*/
+@media screen and (max-width: 799px) {
+  .payment-page-wrapper i {
+    margin-left: 25px;
+  }
+
+  .payment-page-wrapper h1 {
+    margin-bottom: 30px;
+    margin-left: 15%;
+    font-size: 20px;
+  }
+
+  .payment-page-wrapper a {
+    margin-left: 25%;
+  }
+
+  .payment-wrapper {
+    grid-template-columns: 1fr;
+    margin: 30px 0;
+    justify-items: center;
+  }
+
+  .delivery-options {
+    font-size: 15px;
+  }
+
+  .shipping-address2 {
+    line-height: 5px;
+    padding: 15px;
+  }
+
+  .payment-choice {
+    justify-items: left;
+  }
+
+  .shipping-address2 h2 {
+    font-size: 1em;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 100%;
+    margin-bottom: 10px;
   }
 }
