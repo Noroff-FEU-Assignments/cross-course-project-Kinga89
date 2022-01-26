@@ -613,9 +613,22 @@ select {
   margin-bottom: 10px;
 }
 
-.payment-page-wrapper a {
-  margin-left: 80%;
+
+/*--------------------ORDER SUMMARY------------------------*/
+.summary-wrapper i {
+  margin-top: 20px;
 }
+
+.order-confirmation {
+  text-align: center;
+  margin: 0 auto 50px;
+}
+
+.order-confirmation i {
+  font-size: 4em;
+}
+
+
 
 /*MEDIA QUERIES*/
 
@@ -853,7 +866,7 @@ select {
 /*--------------------WOMEN AND MEN SECTION------------------------*/
 @media screen and (max-width: 799px) {
   .jackets {
-    margin: 0 20px;
+    margin: 0 10px;
   }
 
   .all-jackets,
@@ -867,6 +880,10 @@ select {
   .jackets h1,
   .fa-arrow-left {
     font-size: 20px;
+  }
+
+  .jackets h1 {
+    margin-left: 15%;
   }
 
   .product {
@@ -1044,5 +1061,22 @@ select {
     justify-content: flex-start;
     font-size: 100%;
     margin-bottom: 10px;
+  }
+}
+
+
+
+/*--------------------ORDER SUMMARY------------------------*/
+@media screen and (max-width: 799px) {
+  .summary-wrapper i {
+    margin: 20px 20px 0px;
+  }
+  
+  .order-confirmation {
+    margin: 50px 0 110px;
+  }
+  
+  .order-confirmation i {
+    margin-left: 25px;
   }
 }
