@@ -5,14 +5,13 @@
   <script src="https://kit.fontawesome.com/91f98c5a03.js" crossorigin="anonymous"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="High quality rain jackets for low prices" />
+  <meta name="description" content="Payment & delivery choice" />
   <title>Rainy Days|Payment</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Zen+Kaku+Gothic+Antique&display=swap"
     rel="stylesheet" />
   <link href="../css/index.css" rel="stylesheet" />
-  <link href="../css/header.footer.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -28,7 +27,7 @@
       <input type="checkbox" id="hamburger-menu" />
       <nav>
         <ul>
-          <li class="nav-section"><a href="../women.html">Women</a></li>
+          <li class="nav-section"><a href="../women.html" class="current">Women</a></li>
           <li class="nav-section"><a href="../men.html">Men</a></li>
           <li class="nav-section">
             <a href="../collections.html">Collections</a>
@@ -54,20 +53,20 @@
         <div class="form-wrapper2">
           <div class="cards">
             <input type="checkbox" name="visa" value="visa" id="visa" /><label for="visa"><i
-                class="fab fa-cc-visa"></i></label>
+                class="fab fa-cc-visa navy"></i></label>
             <input type="checkbox" name="mastercard" value="mastercard" id="mastercard" /><label for="mastercard"><i
-                class="fab fa-cc-mastercard"></i></label>
+                class="fab fa-cc-mastercard navy"></i></label>
             <input type="checkbox" name="paypal" value="paypal" id="paypal" /><label for="paypal"><i
-                class="fab fa-cc-paypal"></i></label>
+                class="fab fa-cc-paypal navy"></i></label>
           </div>
-          <label for="card number">Card number:</label>
-          <input type="text" name="card number" />
-          <label for="expiry date">Expiry date:</label>
-          <input type="text" name="expiry date" />
+          <label for="ccn">Card number:</label>
+          <input id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{16,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx"/>
+          <label for="cc-exp">Expiry date:</label>
+          <input id="cc-exp" type="tel" inputmode="numeric" pattern="[0-9\s]{4,5}" autocomplete="cc-exp" maxlength="5" placeholder="xx/xx"/>
           <label for="name">Name on card</label>
           <input type="text" name="name" />
-          <label for="CVC">CVC code:</label>
-          <input type="text" name="CVC" />
+          <label for="cc-csc">CVC code:</label>
+          <input id="cc-csc" type="tel" inputmode="numeric" pattern="[0-9\s]{3,4}" autocomplete="cc-csc" maxlength="4" placeholder="xxx"/>
         </div>
       </div>
       <div class="delivery-options">
