@@ -18,7 +18,7 @@ main {
 }
 
 .current {
-  text-decoration: underline;
+  font-size: 130%;
 }
 
 .cta-button {
@@ -151,6 +151,7 @@ nav a:hover {
   padding: 0px;
   line-height: 4;
   text-align: center;
+  
 }
 
 .nav-dropdown:hover .dropdown a {
@@ -162,14 +163,12 @@ nav a:hover {
 
 .nav-dropdown:hover .dropdown ul li:hover {
   background: #0a3641;
-  color: #fff;
   padding: 3px;
 }
 
 .nav-dropdown:hover .dropdown ul li a:hover {
   color: #fff;
 }
-
 
 .spacer {
   min-height: 100px;
@@ -401,7 +400,11 @@ footer {
   position: relative;
   align-self: center;
   left: 10%;
-  }
+}
+
+.contact-info h1 {
+  margin: 0 0 0 30px;
+}
 
 .address-list2 {
   margin-left: 30px;
@@ -417,8 +420,6 @@ footer {
   flex: 1;
 }
 
-
-
 /*--------------------SIGN INN PAGE------------------------*/
 .signin-background {
   background-image: url(../images/signin.jpg);
@@ -427,15 +428,20 @@ footer {
   background-position: center;
   min-height: 100vh;
   width: 100%;
-  position: relative;
   margin: 0;
+  position: relative;
+}
+
+.signin-background .fa-arrow-left {
+  margin: 30px 0 0 30px;
+  color: #fff;
 }
 
 .sign-title {
   color: #fff;
   font-size: 2em;
   position: absolute;
-  top: 15%;
+  top: 0;
   left: 45%;
 }
 
@@ -448,7 +454,7 @@ footer {
   display: flex;
   position: absolute;
   flex-direction: column;
-  top: 30%;
+  top: 20%;
   left: 40%;
   color: #fff;
 }
@@ -694,8 +700,6 @@ select {
   margin: 5px;
 }
 
-
-
 /*--------------------CHECKOUT PAGE WOMEN & MEN------------------------*/
 .checkout-page-wrapper h1,
 .payment-page-wrapper h1 {
@@ -840,8 +844,8 @@ select {
   }
 
   .item_logo {
-   align-content: center;
-   justify-self: center;
+    align-content: center;
+    justify-self: center;
   }
 
   .logo {
@@ -874,20 +878,18 @@ select {
     top: 0;
     left: 100%;
   }
-  
+
   .nav-dropdown:hover .dropdown ul {
     line-height: 3;
+    border-bottom: tomato 2px;
   }
-  
+
   .nav-dropdown:hover .dropdown ul li:hover {
-    padding: 2px;
-    background: #fff;
+    background: transparent;
+    color: #fff;
+    padding: 3px;
   }
-  
-  .nav-dropdown:hover .dropdown ul li a:hover {
-    color: #0a3641;
-  }
-  
+
   .spacer {
     min-height: 70px;
   }
@@ -955,7 +957,7 @@ select {
 
   .sale-section .cta-button {
     bottom: 30%;
-    left:35%
+    left: 35%;
   }
 
   .section-two {
@@ -1048,28 +1050,23 @@ select {
 }
 
 /*------------------------CONTACT--------------------------*/
-@media screen and (max-width: 799px) {  
-.contact-container .fa-arrow-left {
-  margin: 20px 0 0 20px;
-}
+@media screen and (max-width: 799px) {
+  .contact-container .fa-arrow-left {
+    margin: 20px 0 0 20px;
+  }
 
-.contact-container h1 {
-  margin-top: 0;
-}
+  .contact-container {
+    flex-direction: column;
+  }
 
-.contact-container {
-  flex-direction: column;
-}
+  .contact-info {
+    font-size: 80%;
+    left: 0;
+  }
 
-.contact-info {
- font-size: 80%;
- left: 0;
-}
-
-.contact-background {
-  min-height: 40vh;
-}
-
+  .contact-background {
+    min-height: 40vh;
+  }
 }
 
 /*--------------------SIGN INN---------------------------*/
@@ -1080,7 +1077,7 @@ select {
 
   .sign-title {
     font-size: 2em;
-    top: 10%;
+    top: 5%;
     left: 35%;
   }
 
