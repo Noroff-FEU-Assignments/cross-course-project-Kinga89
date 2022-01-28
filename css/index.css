@@ -119,10 +119,7 @@ nav a:hover {
   flex: flex-end;
 }
 
-.fa-search {
-  margin: 10px 10px 0;
-}
-
+.fa-search,
 .fa-user-circle {
   margin: 10px 10px 0;
 }
@@ -130,6 +127,52 @@ nav a:hover {
 .fa-shopping-basket {
   margin-left: 10px;
 }
+
+.dropdown {
+  display: none;
+}
+
+.nav-dropdown {
+  display: inline-block;
+  margin-left: 20px;
+  position: relative;
+}
+
+.nav-dropdown:hover .dropdown {
+  display: block;
+  position: absolute;
+  font-size: 14px;
+  width: 180px;
+  background: #fff;
+  top: 100%;
+  left: 0;
+}
+
+.nav-dropdown:hover .dropdown ul {
+  list-style: none;
+  display: block;
+  padding: 0px;
+  line-height: 4;
+  text-align: center;
+}
+
+.nav-dropdown:hover .dropdown a {
+  text-decoration: none;
+  color: #0a3641;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-dropdown:hover .dropdown ul li:hover {
+  background: #0a3641;
+  color: #fff;
+  padding: 3px;
+}
+
+.nav-dropdown:hover .dropdown ul li a:hover {
+  color: #fff;
+}
+
 
 .spacer {
   min-height: 100px;
@@ -148,16 +191,16 @@ footer {
 .flex-container-footer {
   display: flex;
   justify-content: space-around;
-  padding-top: 20px;
+  padding: 20px 0;
   padding-bottom: 20px;
 }
 
-.address {
+.address,
+.address h2 {
   margin-left: 30px;
 }
 
 .address h2 {
-  margin-left: 30px;
   padding-bottom: 5px;
 }
 
@@ -174,17 +217,8 @@ footer {
   margin-right: 10px;
 }
 
-.footer-nav-one {
-  margin: 0px;
-  text-align: left;
-  padding-left: 0;
-  line-height: normal;
-}
-
 .footer-nav-two {
-  margin: 0px;
   max-width: 300px;
-  padding-left: 0;
 }
 
 .footer-nav-items {
@@ -233,19 +267,17 @@ footer {
 }
 
 .sale-section {
-  margin: 0;
-  min-height: 70vh;
+  height: 70vh;
   width: 100%;
   background-image: url(../images/Couple.by.waterfall.png);
-  background-image: cover;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
   position: relative;
 }
 
-.sale-section a {
+.sale-section .small-button {
   position: absolute;
-  display: inline-block;
   bottom: 200px;
   left: 45%;
 }
@@ -253,6 +285,7 @@ footer {
 .sale-text {
   font-size: 20px;
   color: white;
+  display: inline-block;
   text-transform: uppercase;
   text-align: end;
   margin-right: 30px;
@@ -264,7 +297,7 @@ footer {
   margin: 30px 0px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 100vh;
+  min-height: 80vh;
   gap: 3%;
 }
 
@@ -273,6 +306,7 @@ footer {
   background-repeat: no-repeat;
   position: relative;
   background-size: cover;
+  background-position: center;
 }
 
 .col-men {
@@ -312,11 +346,7 @@ footer {
 
 .image-box-one {
   background-image: url(../images/fabric.jpg);
-  background-repeat: no-repeat;
   margin: 0;
-  background-size: cover;
-  min-height: 200px;
-  width: 100%;
   align-self: center;
 }
 
@@ -328,22 +358,24 @@ footer {
   padding-bottom: 2%;
 }
 
-.industry-img {
-  background-image: url(../images/fashion.industry.png);
+.industry-img,
+.design-img,
+.image-box-one {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 200px;
   width: 100%;
+}
+
+.industry-img {
+  background-image: url(../images/fashion.industry.png);
   margin-bottom: 10px;
+  background-position: right;
 }
 
 .design-img {
   background-image: url(../images/clothing_design.png);
-  background-repeat: no-repeat;
-  background-size: cover;
   background-position-y: bottom;
-  min-height: 200px;
-  width: 100%;
   margin-top: 50px;
 }
 
@@ -363,7 +395,7 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  min-height: 800px;
+  min-height: 100vh;
   width: 100%;
   position: relative;
   margin: 0;
@@ -371,10 +403,9 @@ footer {
 
 .sign-title {
   color: #fff;
-  font-size: 3em;
-  font-weight: bolder;
+  font-size: 2em;
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 45%;
 }
 
@@ -383,39 +414,47 @@ footer {
     Verdana, Tahoma, sans-serif;
 }
 
-.signin-form {
-  width: 600px;
-}
-
 .form-wrapper {
   display: flex;
   position: absolute;
   flex-direction: column;
   top: 30%;
   left: 40%;
+  color: #fff;
 }
 
 .form-wrapper > * {
-  color: #fff;
-  padding: 10px;
+  padding: 5px;
   border-radius: 5%;
-  width: 250px;
+  max-width: 250px;
 }
 
 .signin-button,
 .signin-button-two {
-  margin-top: 20px 0 10px 0;
+  margin-top: 15px;
   text-align: center;
 }
 
 .signin-button-two {
-  min-width: 250px;
+  min-width: 150px;
+  margin-bottom: 10px;
 }
 
 .signin-form p {
   font-size: 1em;
   text-align: center;
-  margin: 10px;
+  margin: 5px;
+  padding: 0;
+}
+
+.new-account,
+.new-password {
+  text-decoration: underline;
+}
+
+.new-password {
+  font-size: 12px;
+  padding: 0;
 }
 
 .signin-button-two a:hover {
@@ -612,50 +651,6 @@ footer {
   margin-top: 0;
 }
 
-.dropdown {
-  display: none;
-}
-
-.size-dropdown {
-  display: inline-block;
-  padding: 5px 20px;
-  box-shadow: 0 0 4px black;
-  margin-left: 20px;
-  position: relative;
-}
-
-.size-dropdown:hover .dropdown {
-  display: block;
-  position: absolute;
-  width: 160px;
-  background: #fff;
-  box-shadow: 0 0 4px rgb(156, 156, 156);
-  top: 100%;
-  left: 0;
-}
-
-.size-dropdown:hover .dropdown ul {
-  list-style: none;
-  display: block;
-  margin: 0;
-  padding: 5px;
-  text-align: center;
-}
-
-.size-dropdown:hover .dropdown a {
-  text-decoration: none;
-  color: black;
-}
-
-.size-dropdown:hover .dropdown ul li:hover {
-  background: #0a3641;
-  padding: 3px;
-}
-
-.size-dropdown:hover .dropdown ul li a:hover {
-  color: #fff;
-}
-
 .button-wrapper a {
   display: inline-block;
 }
@@ -668,6 +663,8 @@ footer {
 select {
   margin: 5px;
 }
+
+
 
 /*--------------------CHECKOUT PAGE WOMEN & MEN------------------------*/
 .checkout-page-wrapper h1,
@@ -783,12 +780,12 @@ select {
 
 /*responsive for mobile devices*/
 
-/*======HEADER=========*/
+/*======HEADER & FOOTER=========*/
 @media screen and (max-width: 799px) {
   nav {
     display: none;
     position: fixed;
-    top: 80px;
+    top: 7%;
     left: -40px;
   }
 
@@ -812,13 +809,14 @@ select {
     align-content: center;
   }
 
+  .item_logo {
+   align-content: center;
+  }
+
   .logo {
     max-width: 100px;
     max-height: 40px;
-  }
-
-  .item_logo {
-    left: 15%;
+    margin: 10px;
   }
 
   .fa-search,
@@ -839,7 +837,7 @@ select {
   }
 
   .spacer {
-    min-height: 95px;
+    min-height: 70px;
   }
 
   /*footer*/
@@ -870,58 +868,10 @@ select {
   }
 }
 
-/*--------------------HOMEPAGE------------------------*/
+/*--------------------HOMEPAGE--------------------------*/
 @media screen and (max-width: 799px) {
   main {
     margin: 0 0;
-  }
-
-  nav {
-    display: none;
-    position: fixed;
-    top: 12%;
-    left: -40px;
-  }
-
-  #hamburger-menu {
-    display: none;
-  }
-
-  #hamburger-menu:checked ~ nav {
-    display: block;
-  }
-
-  .nav-section {
-    display: block;
-    background-color: #fff;
-  }
-
-  .nav-container {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    justify-items: center;
-    align-content: center;
-  }
-
-  .item_logo {
-    left: 15%;
-  }
-
-  .fa-search,
-  .fa-user-circle,
-  .fa-shopping-basket {
-    margin-right: 1px;
-  }
-
-  .fa-search,
-  .fa-user-circle,
-  .fa-shopping-basket,
-  .fa-bars {
-    font-size: 100%;
-  }
-
-  .fa-bars {
-    margin-left: 20px;
   }
 
   .section-one {
@@ -934,7 +884,7 @@ select {
   }
 
   .sale-section {
-    min-height: 60vh;
+    height: 40vh;
   }
 
   .sale-section h1 {
@@ -945,36 +895,33 @@ select {
     font-size: 15px;
   }
 
-  .sale-section a {
-    left: 30%;
-    bottom: 10%;
+  .sale-text {
+    font-size: 18px;
+    text-align: right;
+    top: 5%;
   }
 
-  .sale-text {
-    font-size: 20px;
-    text-align: right;
+  .sale-section .small-button {
+    bottom: 30%;
+    left:35%
   }
 
   .section-two {
     margin: 30px 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: 30vh;
+    min-height: 20vh;
     gap: 3%;
   }
 
-  .col-men,
   .col-women {
-    background-position: center;
+    background-position: top;
   }
 
+  .sale-section a,
   .col-men a,
   .col-women a {
     width: 20%;
-  }
-
-  .col-women .cta-button {
-    padding-right: 30px;
   }
 
   .new-section-one {
@@ -1048,31 +995,35 @@ select {
   }
 }
 
-/*--------------------SIGN INN------------------------*/
+/*--------------------SIGN INN---------------------------*/
 @media screen and (max-width: 799px) {
+  .signin-background {
+    max-height: 80vh;
+  }
+
   .sign-title {
     font-size: 2em;
     top: 10%;
-    left: 40%;
+    left: 35%;
   }
 
   .form-wrapper {
     top: 25%;
-    left: 25%;
+    left: 20%;
   }
 
   .form-wrapper > * {
-    padding: 10px;
+    padding: 5px;
     border-radius: 5%;
   }
 
   .signin-button {
-    margin-top: 40px;
+    margin-top: 20px;
     left: 40%;
   }
 }
 
-/*--------------------ABOUT------------------------*/
+/*--------------------ABOUT------------------------------*/
 @media screen and (max-width: 799px) {
   .main-container {
     display: flex;
@@ -1089,7 +1040,7 @@ select {
   }
 }
 
-/*--------------------WOMEN AND MEN SECTION------------------------*/
+/*--------------------WOMEN AND MEN SECTION--------------*/
 @media screen and (max-width: 799px) {
   .jackets {
     margin: 0 10px;
@@ -1114,15 +1065,15 @@ select {
 
   .product {
     line-height: 10px;
-    font-size: 1em;
+    font-size: 13px;
   }
 
   .product_description {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .product img {
-    height: 20vh;
+    height: 15vh;
   }
 
   .product h2 {
@@ -1139,7 +1090,7 @@ select {
   }
 }
 
-/*--------------------WOMEN AND MEN PRODUCT DETAILS------------------------*/
+/*--------------------WOMEN AND MEN PRODUCT DETAILS-------*/
 @media screen and (max-width: 799px) {
   .page-wrapper i {
     margin-left: 20px;
@@ -1189,7 +1140,7 @@ select {
   }
 }
 
-/*--------------------CHECKOUT PAGE WOMEN & MEN------------------------*/
+/*--------------------CHECKOUT PAGE WOMEN & MEN-----------*/
 @media screen and (max-width: 799px) {
   .checkout-page-wrapper i {
     margin-left: 20px;

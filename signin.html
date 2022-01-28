@@ -25,10 +25,48 @@
       <input type="checkbox" id="hamburger-menu">
       <nav>
         <ul>
-          <li class="nav-section"><a href="women.html">Women</a></li>
-          <li class="nav-section"><a href="men.html">Men</a></li>
-          <li class="nav-section"><a href="collections.html">Collections</a></li>
-          <li class="nav-section"><a href="about.html">About</a></li>
+          <li class="nav-section nav-dropdown"><a href="women.html">Women</a>
+            <div class="dropdown">
+              <ul>
+                <li><a href="women.html">Raincoats</li></a>
+                <li><a href="women.html">Lightweight raincoats</li></a>
+                <li><a href="women.html">Winter raincoats</li></a>
+                <li><a href="women.html">Rainjackets</li></a>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-section nav-dropdown"><a href="men.html">Men</a>
+              <div class="dropdown">
+                <ul>
+                  <li><a href="men.html">Raincoats</li></a>
+                  <li><a href="men.html">Lightweight raincoats</li></a>
+                  <li><a href="men.html">Winter raincoats</li></a>
+                  <li><a href="men.html">Rainjackets</li></a>
+                </ul>
+              </div>
+            </li>
+          <li class="nav-section nav-dropdown"><a href="collections.html">Collections</a>
+            <div class="dropdown">
+              <ul>
+                <li><a href="collections.html">Classics</li></a>
+                <li><a href="collections.html">Sport collection</li></a>
+                <li><a href="collections.html">Winter collection</li></a>
+                <li><a href="collections.html">High visibility</li></a>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-section nav-dropdown"><a href="about.html">Help</a>
+            <div class="dropdown">
+              <ul>
+                <li><a href="index.html">Contact</li></a>
+                <li><a href="about.html">About</li></a>
+                <li><a href="index.html">Customer service</li></a>
+                <li><a href="index.html">FAQ</li></a>
+                <li><a href="index.html">Shipping</li></a>
+                <li><a href="index.html">Return policy</li></a>
+              </ul>
+            </div>
+          </li>
         </ul>
       </nav>
       <div class="icons">
@@ -38,28 +76,27 @@
       </div>
     </div>
   </header>
-  <div class="spacer-signin">&nbsp;</div>
   <main class="signin-background">
     <h1 class="sign-title">Sign in</h1>
     <section class="signin-form">
       <form method="get" action="index.html">
         <div class="form-wrapper">
-          <label for="email"> Email:</label>
-          <input type="text" name="email">
+          <label for="email"> E-mail:</label>
+          <input name="email" type="email" placeholder="E-mail">
           <label for="password"> Password:</label>
-          <input type="text" name="password">
-          <div>
-            <input type="checkbox" name="signup" value="signup" id="signup"><label for="signup">Sign up for our
-              newsletter</label>
+          <input name="password" type="password" placeholder="Password">
+          <div class="new-password">
+            <p>Forgot your password?</p>
           </div>
+        </form>
           <div class="signin-button">
-            <input type="submit" value="Sign in" class="cta-button">
+            <input type="submit" value="Sign in" class="cta-button small-button">
           </div>
           <p>or</p>
           <div class="signin-button-two">
-            <a href="index.html" class="cta-button">Continue as guest</a>
+            <a href="index.html" class="cta-button small-button">Continue as guest</a>
           </div>
-      </form>
+      <p class="new-account">Create new account <i class="far fa-arrow-alt-circle-right"></i></p>
       </div>
     </section>
   </main>
