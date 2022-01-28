@@ -28,7 +28,7 @@ main {
   display: inline;
   border-radius: 15px;
   padding: 10px 20px 10px 20px;
-  font-size: 1em;
+  font-size: 10px;
   font-weight: bolder;
   text-transform: uppercase;
   text-align: center;
@@ -44,10 +44,6 @@ h3 {
 .cta-button:hover {
   background-color: #c06a37;
   color: white;
-}
-
-.small-button {
-  font-size: 10px;
 }
 
 .price {
@@ -114,14 +110,15 @@ nav a:hover {
 
 .icons {
   display: inline-block;
-  color: #0a3641;
   margin-right: 20px;
   flex: flex-end;
 }
 
 .fa-search,
-.fa-user-circle {
+.fa-user-circle,
+.fa-shopping-basket {
   margin: 10px 10px 0;
+  color: #0a3641;
 }
 
 .fa-shopping-basket {
@@ -276,7 +273,7 @@ footer {
   position: relative;
 }
 
-.sale-section .small-button {
+.sale-section .cta-button {
   position: absolute;
   bottom: 200px;
   left: 45%;
@@ -716,7 +713,7 @@ select {
   font-weight: bold;
 }
 
-.form-wrapper2 .small-button {
+.form-wrapper2 .cta-button {
   margin-top: 30px;
 }
 
@@ -785,8 +782,8 @@ select {
   nav {
     display: none;
     position: fixed;
-    top: 7%;
-    left: -40px;
+    top: 60px;
+    left: -60px;
   }
 
   #hamburger-menu {
@@ -811,6 +808,7 @@ select {
 
   .item_logo {
    align-content: center;
+   justify-self: center;
   }
 
   .logo {
@@ -836,6 +834,27 @@ select {
     margin-left: 20px;
   }
 
+  .nav-dropdown:hover .dropdown {
+    z-index: 101;
+    font-size: 12px;
+    width: 130px;
+    top: 0;
+    left: 100%;
+  }
+  
+  .nav-dropdown:hover .dropdown ul {
+    line-height: 3;
+  }
+  
+  .nav-dropdown:hover .dropdown ul li:hover {
+    padding: 2px;
+    background: #fff;
+  }
+  
+  .nav-dropdown:hover .dropdown ul li a:hover {
+    color: #0a3641;
+  }
+  
   .spacer {
     min-height: 70px;
   }
@@ -901,7 +920,7 @@ select {
     top: 5%;
   }
 
-  .sale-section .small-button {
+  .sale-section .cta-button {
     bottom: 30%;
     left:35%
   }
@@ -1184,7 +1203,7 @@ select {
     max-width: 200px;
   }
 
-  .form-wrapper2 .small-button {
+  .form-wrapper2 .cta-button {
     margin-top: 30px;
     margin-left: 10%;
   }
