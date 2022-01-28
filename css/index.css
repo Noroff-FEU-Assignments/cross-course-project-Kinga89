@@ -386,6 +386,39 @@ footer {
   text-align: center;
 }
 
+/*------------------------CONTACT--------------------------*/
+.contact-container .fa-arrow-left {
+  margin: 30px 0 0 30px;
+}
+
+.contact-container {
+  margin: 0;
+  display: flex;
+}
+
+.contact-info {
+  flex: 1;
+  position: relative;
+  align-self: center;
+  left: 10%;
+  }
+
+.address-list2 {
+  margin-left: 30px;
+}
+
+.contact-background {
+  background-image: url(../images/contact.page.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 70vh;
+  width: 100%;
+  flex: 1;
+}
+
+
+
 /*--------------------SIGN INN PAGE------------------------*/
 .signin-background {
   background-image: url(../images/signin.jpg);
@@ -1012,6 +1045,31 @@ select {
   .fa-bars {
     display: none;
   }
+}
+
+/*------------------------CONTACT--------------------------*/
+@media screen and (max-width: 799px) {  
+.contact-container .fa-arrow-left {
+  margin: 20px 0 0 20px;
+}
+
+.contact-container h1 {
+  margin-top: 0;
+}
+
+.contact-container {
+  flex-direction: column;
+}
+
+.contact-info {
+ font-size: 80%;
+ left: 0;
+}
+
+.contact-background {
+  min-height: 40vh;
+}
+
 }
 
 /*--------------------SIGN INN---------------------------*/
