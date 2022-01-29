@@ -5,8 +5,8 @@
   <script src="https://kit.fontawesome.com/91f98c5a03.js" crossorigin="anonymous"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Checkout page" />
-  <title>Rainy Days|Checkout</title>
+  <meta name="description" content="Details about Mark raincoat" />
+  <title>Rainy Days|Mark raincoat</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Zen+Kaku+Gothic+Antique&display=swap"
@@ -81,35 +81,46 @@
     </div>
   </header>
   <div class="spacer">&nbsp;</div>
-  <main class="checkout-page-wrapper">
+  <main class="page-wrapper">
     <i class="fas fa-arrow-left"></i>
-    <h1>Checkout</h1>
-    <section class="checkout-wrapper">
-      <img class="checkout-image" src="../images/Men/men1.jpg" />
-      <div class="order-summary">
-        <h2>Mark</h2>
-        <p>Color: Yellow</p>
-        <p>Size: XL</p>
-        <p>Quantity: 1</p>
-        <p>Total: $120</p>
+    <section class="product-wrapper">
+      <div class="product_images">
+        <img src="../images/Men/men1.jpg" alt="man in a yellow raincoat fishing"/>
+        <img src="../images/Men/detail-men1.jpg" alt="man in a long yellow raincoat fishing" />
+        <img src="../images/Men/detail-men2.jpg" alt="man in a long yellow raincoat holding fishing rod"/>
       </div>
-      <div class="shipping-address">
-        <div class="form-wrapper2">
-          <label for="first name">First name:</label>
-          <input type="text" name="first name" />
-          <label for="last name">Last name</label>
-          <input type="text" name="last name" />
-          <label for="Street">Street</label>
-          <input type="text" name="street" />
-          <label for="postcode">Postcode:</label>
-          <input type="text" name="postcode" />
-          <label for="city"> City:</label>
-          <input type="text" name="city" />
-          <label for="mobile number"> Mobile number:</label>
-          <input type="text" name="mobile number" />
-          <label for="email"> Email:</label>
-          <input type="text" name="email" />
-          <a href="payment-men.html" class="cta-button">Continue to payment</a>
+      <div class="product_description">
+        <h2>Mark</h2>
+        <p>Long raincoat</p>
+        <div class="colors">
+          <p>Yellow <i class="fas fa-circle yellow"></i></p>
+          <p>Red <i class="fas fa-circle red"></i></p>
+          <p>Navy <i class="fas fa-circle navy"></i></p>
+        </div>
+        <p class="price">$120</p>
+        <div class="button wrapper">
+          <a href="checkout-men.html" class="cta-button">Add to cart</a>
+          <div class="size-submenu">
+            <label for="size">Choose your size</label>
+            <select id="size" name="size">
+              <option value="XS">XS</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+          </div>
+        </div>
+        <div class="product-text">
+          <p><i class="far fa-check-square green"></i>In stock</p>
+          <h3>Product description</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua.
+          </p>
+          <h3>Material & care advice</h3>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
         </div>
       </div>
     </section>
@@ -146,7 +157,6 @@
           </ul>
         </nav>
       </section>
-
       <section class="social-media">
         <i class="fab fa-facebook"></i>
         <i class="fab fa-instagram"></i>

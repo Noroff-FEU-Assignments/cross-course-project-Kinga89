@@ -5,8 +5,8 @@
   <script src="https://kit.fontawesome.com/91f98c5a03.js" crossorigin="anonymous"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Checkout page" />
-  <title>Rainy Days|Checkout</title>
+  <meta name="description" content="Payment & delivery choice" />
+  <title>Rainy Days|Payment</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Zen+Kaku+Gothic+Antique&display=swap"
@@ -81,38 +81,47 @@
     </div>
   </header>
   <div class="spacer">&nbsp;</div>
-  <main class="checkout-page-wrapper">
+  <main class="payment-page-wrapper">
     <i class="fas fa-arrow-left"></i>
-    <h1>Checkout</h1>
-    <section class="checkout-wrapper">
-      <img class="checkout-image" src="../images/Women/woman1.jpg">
-      <div class="order-summary">
-        <h2>Free Spirit raincoat</h2>
-        <p>Color: Yellow</p>
-        <p>Size: S</p>
-        <p>Quantity: 1</p>
-        <p>Total: $120</p>
-      </div>
-      <div class="shipping-address">
+    <h1>Payment method</h1>
+    <section class="payment-wrapper">
+      <div class="payment-choice">
         <div class="form-wrapper2">
-          <label for="first name">First name:</label>
-          <input type="text" name="first name">
-          <label for="last name">Last name</label>
-          <input type="text" name="last name">
-          <label for="Street">Street</label>
-          <input type="text" name="street">
-          <label for="postcode">Postcode:</label>
-          <input type="text" name="postcode">
-          <label for="city"> City:</label>
-          <input type="text" name="city">
-          <label for="mobile number"> Mobile number:</label>
-          <input type="text" name="mobile number">
-          <label for="email"> Email:</label>
-          <input type="text" name="email">
-          <a href="payment-women.html" class="cta-button">Continue to payment</a>
+          <div class="cards">
+            <input type="checkbox" name="visa" value="visa" id="visa" /><label for="visa"><i
+                class="fab fa-cc-visa navy"></i></label>
+            <input type="checkbox" name="mastercard" value="mastercard" id="mastercard" /><label for="mastercard"><i
+                class="fab fa-cc-mastercard navy"></i></label>
+            <input type="checkbox" name="paypal" value="paypal" id="paypal" /><label for="paypal"><i
+                class="fab fa-cc-paypal navy"></i></label>
+          </div>
+          <label for="ccn">Card number:</label>
+          <input name="ccn" id="ccn" class="ccn" type="tel" pattern="\d*" maxlength="19" placeholder="xxxx xxxx xxxx xxxx"/>
+          <label for="cc-exp">Expiry date:</label>
+          <input name="cc-exp" id="cc-exp" class="cc-exp" type="tel" pattern="\d*" maxlength="5" placeholder="mm/yy"/>
+          <label for="name">Name on card</label>
+          <input type="text" id="name" name="name" />
+          <label for="credit-cvc">CVC code:</label>
+          <input name="credit-cvc" id="credit-cvc" class="cc-cvc" type="tel" pattern="\d*" maxlength="4" placeholder="CVC"/>
         </div>
       </div>
+      <div class="delivery-options">
+        <input type="checkbox" name="Standard" value="Standard" id="standard" />Standard delivery<label
+          for="standard"></label>
+        <p>Order will be delivered before 15th of february 2022</p>
+        <input type="checkbox" name="express" value="express" id="express" />Express delivery<label
+          for="express"></label>
+        <p>Order will be delivered before 1st of february 2022</p>
+      </div>
+      <div class="shipping-address2">
+        <h2>Delivery address</h2>
+        <p>Mary McDonald</p>
+        <p>Kongens gate 26</p>
+        <p>1234 Kristiansand</p>
+        <p>Norway</p>
+      </div>
     </section>
+    <a href="../product_details/summary-women.html" class="cta-button">Pay</a>
   </main>
   <footer>
     <div class="flex-container-footer">
