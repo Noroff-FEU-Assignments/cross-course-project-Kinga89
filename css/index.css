@@ -1115,7 +1115,7 @@ select {
   .sale-text {
     text-align: left;
   }
-  
+
   .new-section-one {
     display: none;
   }
@@ -1314,7 +1314,7 @@ select {
   .checkout-page-wrapper {
     min-height: 100vh;
   }
-  
+
   .checkout-page-wrapper i {
     margin-left: 20px;
   }
@@ -1419,7 +1419,7 @@ select {
   .summary-wrapper {
     min-height: 100vh;
   }
-  
+
   .summary-wrapper i {
     margin: 20px 20px 0px;
   }
