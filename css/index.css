@@ -117,12 +117,41 @@ nav a:hover {
 .fa-search,
 .fa-user-circle,
 .fa-shopping-basket {
-  margin: 10px 10px 0;
+  margin: 5px 10px 0;
   color: #0a3641;
 }
 
 .fa-shopping-basket {
   margin-left: 10px;
+}
+
+.search {
+  position: absolute;
+  right: 7%;
+  transform: translate(-8%, -8%);
+}
+
+.search:hover > .search-text {
+  border: #c06a37 2px solid;
+  padding: 10px;
+  height: 20px;
+  width: 200px;
+  border-radius: 5%;
+}
+
+.search-text {
+  border: none;
+  background: none;
+  outline: none;
+  transition: 0.5s;
+  width: 0;
+}
+
+.search_button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-right: 5px;
 }
 
 .dropdown {
@@ -151,7 +180,6 @@ nav a:hover {
   padding: 0px;
   line-height: 4;
   text-align: center;
-  
 }
 
 .nav-dropdown:hover .dropdown a {
@@ -815,7 +843,7 @@ select {
 /*responsive for mobile devices*/
 
 /*======HEADER & FOOTER=========*/
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 810px) {
   nav {
     display: none;
     position: fixed;
@@ -854,13 +882,11 @@ select {
     margin: 10px;
   }
 
-  .fa-search,
   .fa-user-circle,
   .fa-shopping-basket {
     margin-right: 1px;
   }
 
-  .fa-search,
   .fa-user-circle,
   .fa-shopping-basket,
   .fa-bars {
@@ -881,17 +907,73 @@ select {
 
   .nav-dropdown:hover .dropdown ul {
     line-height: 3;
-    border-bottom: tomato 2px;
   }
 
   .nav-dropdown:hover .dropdown ul li:hover {
     background: transparent;
-    color: #fff;
     padding: 3px;
+  }
+
+  .nav-dropdown:hover .dropdown ul li a:hover {
+    color: #0a3641;
   }
 
   .spacer {
     min-height: 70px;
+  }
+
+  .fa-search {
+    display: none;
+  }
+
+  .search {
+    display: none;
+  }
+
+  .search2 {
+    display: flex;
+    top: 80px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 2px black;
+    position: fixed;
+    background: #fff;
+    z-index: 150;
+    right: 3%;
+    transform: translate(-3%, -3%);
+  }
+
+  .search2 i {
+    display: inline-block;
+    color: #0a3641;
+  }
+
+  .search2:hover {
+    border-radius: 0;
+    width: 250px;
+  }
+
+  .search2:hover > .search-text2 {
+    padding: 10px;
+    height: 20px;
+    width: 100%;
+    align-content: center;
+  }
+
+  .search-text2 {
+    border: none;
+    background: none;
+    outline: none;
+    transition: 0;
+    width: 0;
+  }
+
+  .search_button2 {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-right: 3px;
+    padding: 1;
   }
 
   /*footer*/
@@ -923,7 +1005,7 @@ select {
 }
 
 /*--------------------HOMEPAGE--------------------------*/
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 810px) {
   main {
     margin: 0 0;
   }
@@ -950,9 +1032,8 @@ select {
   }
 
   .sale-text {
-    font-size: 18px;
-    text-align: right;
-    top: 5%;
+    text-align: left;
+    left: 20px;
   }
 
   .sale-section .cta-button {
@@ -1030,7 +1111,11 @@ select {
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 811px) {
+  .sale-text {
+    text-align: left;
+  }
+  
   .new-section-one {
     display: none;
   }
@@ -1049,14 +1134,21 @@ select {
   }
 }
 
+@media screen and (min-width: 1000px) {
+  .search2 {
+    display: none;
+  }
+}
+
 /*------------------------CONTACT--------------------------*/
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 810px) {
   .contact-container .fa-arrow-left {
     margin: 20px 0 0 20px;
   }
 
   .contact-container {
     flex-direction: column;
+    min-height: 100vh;
   }
 
   .contact-info {
@@ -1070,20 +1162,22 @@ select {
 }
 
 /*--------------------SIGN INN---------------------------*/
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 810px) {
   .signin-background {
-    max-height: 80vh;
+    max-height: 70vh;
   }
 
   .sign-title {
     font-size: 2em;
-    top: 5%;
+    justify-content: center;
+    align-content: center;
     left: 35%;
   }
 
   .form-wrapper {
-    top: 25%;
-    left: 20%;
+    justify-content: center;
+    align-content: center;
+    left: 25%;
   }
 
   .form-wrapper > * {
@@ -1093,12 +1187,13 @@ select {
 
   .signin-button {
     margin-top: 20px;
-    left: 40%;
+    align-content: center;
+    left: 35%;
   }
 }
 
 /*--------------------ABOUT------------------------------*/
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 810px) {
   .main-container {
     display: flex;
     flex-wrap: wrap;
@@ -1115,7 +1210,7 @@ select {
 }
 
 /*--------------------WOMEN AND MEN SECTION--------------*/
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 810px) {
   .jackets {
     margin: 0 10px;
   }
@@ -1165,7 +1260,7 @@ select {
 }
 
 /*--------------------WOMEN AND MEN PRODUCT DETAILS-------*/
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 810px) {
   .page-wrapper i {
     margin-left: 20px;
   }
@@ -1215,7 +1310,11 @@ select {
 }
 
 /*--------------------CHECKOUT PAGE WOMEN & MEN-----------*/
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 810px) {
+  .checkout-page-wrapper {
+    min-height: 100vh;
+  }
+  
   .checkout-page-wrapper i {
     margin-left: 20px;
   }
@@ -1269,7 +1368,7 @@ select {
 }
 
 /*--------------------PAYMENT------------------------*/
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 810px) {
   .payment-page-wrapper i {
     margin-left: 25px;
   }
@@ -1316,7 +1415,11 @@ select {
 }
 
 /*--------------------ORDER SUMMARY------------------------*/
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 810px) {
+  .summary-wrapper {
+    min-height: 100vh;
+  }
+  
   .summary-wrapper i {
     margin: 20px 20px 0px;
   }
