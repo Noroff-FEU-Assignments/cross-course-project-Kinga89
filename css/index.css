@@ -7,7 +7,9 @@ html {
 }
 
 body {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
   padding: 0;
   font-family: "Zen Kaku Gothic Antique", sans-serif, "Open Sans", sans-serif,
     Verdana, Tahoma, sans-serif;
@@ -467,51 +469,75 @@ footer {
 
 .sign-title {
   color: #fff;
-  font-size: 2em;
+  font-size: 3em;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  margin-top: 5px;
 }
 
 .signin-form {
-  font-family: "Zen Kaku Gothic Antique", sans-serif, "Open Sans", sans-serif,
-    Verdana, Tahoma, sans-serif;
+  margin-bottom: 50px;
 }
 
-.form-wrapper {
+#form {
+  font-family: "Zen Kaku Gothic Antique", sans-serif, "Open Sans", sans-serif,
+    Verdana, Tahoma, sans-serif;
+    font-size: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   top: 20%;
   color: #fff;
   margin-bottom: 50px;
+  width: auto;
 }
 
-.form-wrapper > * {
-  padding: 5px;
+#form > * {
+  padding: 15px;
   border-radius: 5%;
+  max-width: 200px;
+}
+
+
+.form-error {
+  margin-top: 2px;
+  font-size: 18px;
+  margin-left: 10px;
+  color: red;
+  display: none;
+}
+
+.validation-passed {
+  text-align: center;
+  color: green;
+  display: none;
+}
+
+input {
+  padding: 10px;
+  margin-top: 5px;
   max-width: 200px;
 }
 
 .signin-button,
 .signin-button-two {
-  align-content: center;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
-.signin-button-two {
-  min-width: 150px;
-  margin-bottom: 10px;
+.signin-button-two a:hover {
+  background-color: #c06a37;
+  color: white;
 }
 
 .signin-form p {
-  font-size: 1em;
+  font-size: 18px;
   margin: 5px;
   padding: 0;
   color: #fff;
 }
 
-.new-account,
+.create-new-account,
 .new-password {
   text-decoration: underline;
 }
@@ -519,16 +545,16 @@ footer {
 .new-password {
   font-size: 12px;
   padding: 0;
+  margin-bottom: 0;
 }
 
-.new-account {
+.create-new-account {
   text-align: center;
+  font-weight: bolder;
+  margin: 30px;
 }
 
-.signin-button-two a:hover {
-  background-color: #c06a37;
-  color: white;
-}
+
 
 /*--------------------ABOUT PAGE------------------------*/
 .main-container {

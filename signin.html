@@ -96,25 +96,36 @@
     <i class="fas fa-arrow-left"></i>
     <h1 class="sign-title">Sign in</h1>
     <section class="signin-form">
-      <form method="get" action="index.html">
-        <div class="form-wrapper">
-          <label for="email"> E-mail:</label>
-          <input name="email" id="email" type="email" placeholder="E-mail">
-          <label for="password"> Password:</label>
-          <input name="password" id="password" type="password" placeholder="Password">
+      <form id="form" method="get">
+          <div class="section-form"> 
+            <label> E-mail:
+          <input id="email"  placeholder="E-mail">
+        </label>
+        <div id="emailError" class="form-error"><strong>Invalid email address</strong></div>  
+        </div>
+          <div class="section-form"> 
+           <label> Password:
+          <input id="password" placeholder="Password" type="password">
+        </label>  
+        <div class="form-error" id="passwordError">
+         <strong>Invalid password</strong> </div> 
+        </div>
           <div class="new-password">
             <p>Forgot your password?</p>
           </div>
+          <div>
+                   <button class="cta-button signin-button">Log in</button> 
           </div>
+
       </form>
-      <div class="signin-button">
-        <input type="submit" value="Sign in" class="cta-button small-button">
-      <p>or</p>
-    </div>
+      
       <div class="signin-button-two">
         <a href="index.html" class="cta-button">Continue as guest</a>
       </div>
-      <p class="new-account">Create new account <i class="far fa-arrow-alt-circle-right"></i></p>
+      <div class="create-new-account">
+              <p>Create new account <i class="far fa-arrow-alt-circle-right"></i></p>
+      </div>
+
     </section>
   </main>
   <footer>
@@ -155,6 +166,7 @@
       </section>
     </div>
   </footer>
+  <script src="js/signin.js"></script>
 </body>
 
 </html>
