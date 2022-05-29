@@ -1,3 +1,6 @@
+import {goBack} from "./utils.js"
+const previousPage = document.querySelector(".fa-arrow-left");
+
 const form = document.querySelector("#form");
 const sectionForm = document.querySelector(".section-form");
 
@@ -8,6 +11,9 @@ const password = document.querySelector("#password");
 const passwordError = document.querySelector("#passwordError");
 
 const submitButton = document.querySelector(".submit");
+
+previousPage.addEventListener ("click", goBack);
+
 
 function validateForm() {
     event.preventDefault();
@@ -34,9 +40,6 @@ function validateForm() {
 
     console.log (email.value)
     console.log(password.value)
-
-
-
 }
 
 form.addEventListener("submit", validateForm);
@@ -54,3 +57,5 @@ function validatePassword(password) {
     const passwordPatternMatch = passwordRegEx.test(password);
     return passwordPatternMatch;
 }
+
+

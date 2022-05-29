@@ -85,33 +85,51 @@
     <i class="fas fa-arrow-left"></i>
     <h1>Checkout</h1>
     <section class="checkout-wrapper">
-      <img class="checkout-image" src="../images/Women/woman1.jpg" alt="woman in a yellow raincoat with mounatins in the background">
-      <div class="order-summary">
-        <h2>Free Spirit raincoat</h2>
-        <p>Color: Yellow</p>
-        <p>Size: S</p>
-        <p>Quantity: 1</p>
-        <p>Total: $120</p>
+      <div class="order-details"> 
       </div>
       <div class="shipping-address">
-        <div class="form-wrapper2">
-          <label for="first-name">First name:</label>
-          <input type="text" id="first-name" name="first-name" />
-          <label for="last-name">Last name</label>
-          <input type="text" id="last-name" name="last-name" />
-          <label for="street">Street</label>
-          <input type="text" id="street" name="street" />
-          <label for="postcode">Postcode:</label>
-          <input type="text" id="postcode" name="postcode" />
-          <label for="city"> City:</label>
-          <input type="text" id="city" name="city" />
-          <label for="mobile-number"> Mobile number:</label>
-          <input type="text" id="mobile-number" name="mobile-number" />
-          <label for="email"> Email:</label>
-          <input type="text" id="email" name="email" />
-          <a href="payment-women.html" class="cta-button">Continue to payment</a>
+        <form class="form-wrapper2">
+          <div class="section-form">
+              <label for="first-name">First name:
+             <input id="first-name">
+          </label>
+          <div id="firstNameError" class="form-error"><strong>This field is required </strong></div>  
+          </div>
+        
+          <div class="section-form">
+          <label for="last-name">Last name
+             <input  id="last-name"/>
+          </label>
+          <div id="lastNameError" class="form-error"><strong>This field is required </strong></div>  
+         </div>
+
+         
+         <div class="section-form">
+          <label for="mobile-number"> Mobile number:
+             <input id="mobile-number" type="tel"/>
+          </label>
+          <div id="mobileNumberError" class="form-error"><strong>This field is required </strong></div>  
+          </div>
+
+          <div class="section-form">
+          <label for="email"> Email:
+              <input id="email" />
+          </label>
+          <div id="emailError" class="form-error"><strong>This field is required </strong></div>  
+          </div>
+
+          <div class="section-form">
+          <label for="address">Address:
+          <textarea id="address"> </textarea> 
+          </label>
+          <div id="addressError" class="form-error"><strong>Address has to contain minimum 25 characters </strong></div>  
+          </div>
+           <button class="cta-button small-button"> <a href="payment.html">Continue to payment</a></button>
+          </form>
         </div>
-      </div>
+      
+    
+   <div class="total"></div>
     </section>
   </main>
   <footer>
@@ -153,6 +171,7 @@
       </section>
     </div>
   </footer>
+  <script src="/js/checkout.js" type="module"></script>
 </body>
 
 </html>

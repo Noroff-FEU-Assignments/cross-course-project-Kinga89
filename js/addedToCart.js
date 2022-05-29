@@ -1,8 +1,8 @@
-import { jackets } from "./freeSpirit.js";
+import { jackets } from "./allJackets";
 
 console.log(jackets);
 
-const addToCartButton = document.querySelectorAll(".cta-button");
+const addToCartButton = document.querySelectorAll("button");
 const cart = document.querySelector(".basket");
 const size = document.querySelector("select");
 let cartArray = [];
@@ -38,3 +38,15 @@ size.onchange = function () {
 }
 
 
+import { showCart } from "./women.js";
+
+
+addToCartButton.forEach(function (button) {
+    button.onclick = function (event) {
+        const itemToAdd = jackets.find(item => item.id === event.target.dataset.product);
+        cartArray.push(itemToAdd);
+        console.log(cartArray);
+        showCart(cartArray);
+        localStorage.setItem("cartList", JSON.stringify(cartArray))
+    }
+});
