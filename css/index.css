@@ -30,12 +30,28 @@ main {
   display: inline;
   border-radius: 15px;
   padding: 10px 20px 10px 20px;
-  font-size: 10px;
+  font-size: 15px;
   font-weight: bolder;
   text-transform: uppercase;
   text-align: center;
   width: 120px;
   box-shadow: 0 0 4px black;
+
+}
+
+
+.small-button {
+    background-color: white;
+    color: #0a3641;
+    text-decoration: none;
+    display: inline;
+    border-radius: 15px;
+    padding: 10px 20px 10px 20px;
+    font-size: 10px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
+    width: 120px;
 }
 
 h2,
@@ -43,7 +59,8 @@ h3 {
   font-weight: bolder;
 }
 
-.cta-button:hover {
+.cta-button:hover,
+.small-button:hover {
   background-color: #c06a37;
   color: white;
 }
@@ -113,23 +130,64 @@ nav a:hover {
 .icons {
   display: inline-block;
   margin-right: 20px;
-  flex: flex-end;
+  justify-content: space-between;
 }
 
 .fa-search,
 .fa-user-circle,
 .fa-shopping-basket {
-  margin: 5px 10px 0;
+  margin: 5px 30px 0;
   color: #0a3641;
 }
 
 .fa-shopping-basket {
   margin-left: 10px;
+  margin-right: 30px;  
+  cursor: pointer;
+}
+
+.added-item-in-the-basket {
+  z-index: 100;
+  display: inline-block;
+  border: #4cd038 3px solid;
+  background-color: #ffffff;
+  height: fit-content;
+  width: fit-content;
+  margin-top: 35px;
+  position: fixed;
+  right: 0;
+}
+
+.checkout-window {
+  padding: 20px;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkout-window a {
+  text-decoration: none;
+}
+
+.checkout-window h4, 
+.checkout-window p, 
+.checkout-window button {
+  margin: 10px;
+}
+
+
+
+.detail-img {
+  max-height: 70px;
+  max-width: 80px;
+  
 }
 
 .search {
   position: absolute;
-  right: 7%;
+  right: 10%;
   transform: translate(-8%, -8%);
 }
 
@@ -204,6 +262,7 @@ nav a:hover {
   min-height: 100px;
   width: 100%;
 }
+
 
 /*FOOTER*/
 footer {
@@ -501,7 +560,7 @@ footer {
 
 .form-error {
   margin-top: 2px;
-  font-size: 18px;
+  font-size: 15px;
   margin-left: 10px;
   color: red;
   display: none;
@@ -622,6 +681,9 @@ input {
 .product {
   line-height: 15px;
   background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .product img {
@@ -638,6 +700,7 @@ input {
 
 .product p {
   margin: 5px 0px;
+
 }
 
 .colors {
@@ -708,6 +771,8 @@ input {
   color: #d8bca9;
 }
 
+
+
 /*--------------------WOMEN AND MEN PRODUCT DETAILS------------------------*/
 .page-wrapper {
   margin-top: 20px;
@@ -757,6 +822,7 @@ input {
 select {
   margin: 5px;
 }
+
 
 /*--------------------CHECKOUT PAGE WOMEN & MEN------------------------*/
 .checkout-page-wrapper h1,

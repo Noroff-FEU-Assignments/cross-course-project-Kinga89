@@ -77,9 +77,11 @@
       <div class="icons">
         <a href="../signin.html"><i class="far fa-user-circle"></i></a>
         <i class="fas fa-shopping-basket"></i>
+          <div class="basket"></div>
       </div>
     </div>
   </header>
+
   <div class="spacer">&nbsp;</div>
   <main class="page-wrapper">
     <i class="fas fa-arrow-left"></i>
@@ -100,7 +102,7 @@
         </div>
         <p class="price">$120</p>
         <div class="button wrapper">
-          <a href="checkout-women.html" class="cta-button">Add to cart</a>
+          <a class="cta-button" data-jacket="Free Spirit raincoat">Add to cart</a>
           <div class="size-submenu">
             <label for="size">Choose your size</label>
             <select id="size" name="size">
@@ -164,6 +166,7 @@
       </section>
     </div>
   </footer>
+  <script src="/js/addedToCart.js" type="module"></script>
 </body>
 
 </html>
