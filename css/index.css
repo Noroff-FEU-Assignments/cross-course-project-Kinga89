@@ -1491,24 +1491,21 @@ textarea {
   .basket {
     margin-top: 25px;
     width: 100%;
+    padding: 10px;
   }
-  .cart-item {
-    padding: 5px;
-  }
+  
 
   .cart-item h4 {
-    font-size: 13px;
+    font-size: 16px;
   }
 
   .cart-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
   }
 
-  .cta-button.small-button {
-  margin: 15px;
-  }
 
   .total-price {
     padding: 3px;
