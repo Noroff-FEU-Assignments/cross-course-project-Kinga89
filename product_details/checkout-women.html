@@ -24,7 +24,7 @@
         </a>
       </div>
       <input type="checkbox" id="hamburger-menu">
-      <nav>
+      <nav aria-labelledby="primary-navigation">
         <ul>
           <li class="nav-section nav-dropdown"><a href="../women.html">Women</a>
             <div class="dropdown">
@@ -86,6 +86,7 @@
     <h1>Checkout</h1>
     <section class="checkout-wrapper">
       <div class="order-details"> 
+       
       </div>
       <div class="shipping-address">
         <form class="form-wrapper2">
@@ -134,17 +135,17 @@
   </main>
   <footer>
     <div class="flex-container-footer">
-      <section class="address">
+      <div class="address">
         <h2>Rainy Days</h2>
         <p><i class="far fa-envelope"></i>contact@rainydays.com</p>
         <p><i class="fas fa-home"></i>Rainydays Customer Service</p>
         <p class="address_list">Karl Johans gate 34</p>
         <p class="address_list">1234 Oslo</p>
         <p class="address_list">Norway</p>
-      </section>
-      <section class="footer-nav-one">
+      </div>
+      <div class="footer-nav-one">
         <div>
-          <nav>
+          <nav aria-labelledby="footer-navigation">
             <ul class="footer-nav-items">
               <li>About us</li>
               <li>Privacy Policy</li>
@@ -153,9 +154,9 @@
             </ul>
           </nav>
         </div>
-      </section>
-      <section class="footer-nav-two">
-        <nav>
+      </div>
+      <div class="footer-nav-two">
+        <nav aria-labelledby="footer-navigation">
           <ul class="footer-nav-items">
             <li>FAQs</li>
             <li>Shipping</li>
@@ -163,12 +164,12 @@
             <li>Return Policy</li>
           </ul>
         </nav>
-      </section>
+      </div>
 
-      <section class="social-media">
+      <div class="social-media">
         <i class="fab fa-facebook"></i>
         <i class="fab fa-instagram"></i>
-      </section>
+      </div>
     </div>
   </footer>
   <script src="/js/checkout.js" type="module"></script>

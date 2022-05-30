@@ -6,8 +6,11 @@ console.log(cartItems)
 
 const cartContainer = document.querySelector(".order-details");
 const totalPrice = document.querySelector(".total");
-
+let yourSize = document.querySelector(".yourSize");
 let total = 0;
+
+previousPage.addEventListener("click", goBack);
+
 
 cartItems.forEach(function (cartElement) {
     total += cartElement.price;
@@ -19,7 +22,7 @@ cartItems.forEach(function (cartElement) {
 });
 totalPrice.innerHTML = `Total: $ ${total}`;
 
-previousPage.addEventListener ("click", goBack);
+
 
 /* FORM */
 const formWrapper = document.querySelector(".form-wrapper2");

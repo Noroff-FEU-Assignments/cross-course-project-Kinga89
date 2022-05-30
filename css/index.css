@@ -21,6 +21,7 @@ main {
 
 .current {
   font-size: 130%;
+  text-decoration: underline;
 }
 
 .cta-button {
@@ -53,26 +54,7 @@ main {
     width: 120px;
 }
 
-button.small-button {
-  align-self: center;
-}
 
-.basket a {
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.cart-item h4 {
-  text-align: center;
-  font-size: larger;
-}
-
-h2,
-h3 {
-  font-weight: bolder;
-}
 
 .cta-button:hover,
 .small-button:hover {
@@ -80,11 +62,6 @@ h3 {
   color: white;
 }
 
-.price {
-  font-size: 2em;
-  padding: 0;
-  margin-top: 0;
-}
 
 /*HEADER & FOOTER (desktop)*/
 header {
@@ -179,6 +156,10 @@ nav a:hover {
   display: none;
 }
 
+.basket h4 {
+  text-align: center;
+}
+
 .cart-content {
   display: flex;
   flex-direction: row;
@@ -194,6 +175,11 @@ nav a:hover {
 hr {
   border-style: 1px solid rgb(98, 97, 97);
   margin: 20px;
+}
+
+.yourSize {
+  text-align: right;
+  margin-right: 10px;
 }
 
 .total-price {
@@ -218,8 +204,6 @@ hr {
 .checkout-window button {
   margin: 10px;
 }
-
-
 
 
 .search {
@@ -736,9 +720,14 @@ input {
   background: #8f8f8f4d;
 }
 
-.product p {
-  margin: 5px 0px;
+button.small-button {
+  align-self: center;
+}
 
+.price {
+  font-size: 20px;
+  padding: 0;
+  margin-top: 0;
 }
 
 .colors {
@@ -1156,6 +1145,10 @@ textarea {
     padding: 1;
   }
 
+  /***BASKET***/
+ 
+
+
   /*footer*/
 
   footer {
@@ -1425,10 +1418,14 @@ textarea {
     height: 15vh;
   }
 
-  .product h2 {
-    font-size: 1em;
+  .product h3 {
+    font-size: 18px;
   }
 
+  .product p {
+    padding-bottom: 12px;
+    font-size: 16px;
+}
   .colors i {
     font-size: 10px;
     margin-right: 5px;
@@ -1462,21 +1459,24 @@ textarea {
     margin-left: 0;
   }
 
-  .product_images img {
-    margin-bottom: 10px;
+  .product_description h2 {
+    font-size: 20px;
   }
 
-  .price {
-    font-size: 20px;
+  .product_description h3 {
+    font-size: 16px;
+  }
+
+  .product_description p {
+  font-size: 16px;
+  }
+
+  .product-text p {
+    font-size: 14px;
   }
 
   .product_images {
     margin: 0 30px 0 0;
-  }
-
-  .button-wrapper {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
   }
 
   .size-submenu {
@@ -1490,10 +1490,9 @@ textarea {
 
   .basket {
     margin-top: 25px;
-    width: 100%;
+    width: 95%;
     padding: 10px;
   }
-  
 
   .cart-item h4 {
     font-size: 16px;
@@ -1503,16 +1502,15 @@ textarea {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
   }
-
 
   .total-price {
     padding: 3px;
     margin: 0;
     text-align: center;
   }
-  
+
+
 }
 
 /*--------------------CHECKOUT PAGE WOMEN & MEN-----------*/
@@ -1530,8 +1528,9 @@ textarea {
   }
 
   .checkout-page-wrapper h1 {
-    margin-left: 30%;
-    font-size: 20px;
+    text-align: center;
+    margin-left: 30px;
+    font-size: 22px;
   }
 
   .checkout-wrapper {
@@ -1541,8 +1540,15 @@ textarea {
     margin-bottom: 30px;
   }
 
-  .checkout-image {
-    max-width: 200px;
+  .order-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .order-details h2,
+  .order-details p {
+    font-size: 20px;
   }
 
   .order-summary p {

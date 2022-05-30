@@ -27,6 +27,7 @@ jacketContainer.innerHTML += `
 <p>${freeSpiritJacket.currency} ${freeSpiritJacket.price}</p>
 <div class="button-wrapper">
 <button class="cta-button small-button" data-product="${freeSpiritJacket.id}">Add to cart</button>
+
 <div class="size-submenu">
   <label for="size">Choose your size</label>
   <select id="size" name="size">
@@ -41,6 +42,11 @@ jacketContainer.innerHTML += `
 
 <div class="product-text">
 <p><i class="far fa-check-square green"></i>In stock</p>
+<div class="colors">
+<p>Yellow <i class="fas fa-circle yellow"></i></p>
+<p>Red <i class="fas fa-circle red"></i></p>
+<p>Navy <i class="fas fa-circle navy"></i></p>
+</div>
 <h3>Product description</h3>
 <p>${freeSpiritJacket.product_description}</p>
 
@@ -55,18 +61,18 @@ const cart = document.querySelector(".basket");
 const size = document.querySelector("select");
 const cartList = document.querySelector(".cart-list");
 let totalPrice = document.querySelector(".total-price");
+let yourSize = document.querySelector(".yourSize");
 let cartArray = [];
 
 
-
-size.onchange = function () {
-    const selectedSize = this.value;
-    for (let i = 0; i <= selectedSize.length; i++) {
-    }
+size.onchange = function chosenSize () {
+    const selectedSize = event.target.value;
+    yourSize.innerHTML = `Size: ${selectedSize}`;
     console.log(this.value)
 };
 
 
+/*Add to cart button on details page */
 const buttons = document.querySelectorAll("button");
 buttons.forEach(function (button) {
     button.onclick = function (event) {
@@ -84,9 +90,9 @@ function showCart(productsInTheCart) {
     let total = 0;
 
     productsInTheCart.forEach(function (cartElement) {
+
         total += cartElement.price;
         cartList.innerHTML += `
-        
         <div class="cart-item">
         <h4>${cartElement.name}</h4>
         <div class="cart-content">
@@ -96,9 +102,11 @@ function showCart(productsInTheCart) {
         <hr></hr>
         </div>
         `;
-    });
-    totalPrice.innerHTML = `Total: $ ${total}`;
-};
 
+    });
+
+    totalPrice.innerHTML = `Total: $ ${total}`;
+
+}
 
 

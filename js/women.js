@@ -17,7 +17,7 @@ jackets.forEach(function (product) {
     <div class="product">
     <a href="/product_details/free-spirit.html"><img src="${product.image}" alt="${product.name}"</></a>
     <h3>${product.name}</h3>
-    <p>${product.currency} ${product.price}</p>
+    <p class="price">${product.currency} ${product.price}</p>
     <button class="cta-button small-button" data-product="${product.id}">Add to cart</button>
     </div>
     `
@@ -38,13 +38,11 @@ buttons.forEach(function (button) {
 
 function showCart(productsInTheCart) {
     cart.style.display = "block";
-    cartList.innerHTML = "";
     let total = 0;
 
     productsInTheCart.forEach(function (cartElement) {
         total += cartElement.price;
         cartList.innerHTML += `
-        
         <div class="cart-item">
         <h4>${cartElement.name}</h4>
         <div class="cart-content">
