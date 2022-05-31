@@ -133,6 +133,10 @@ nav a:hover {
   color: #0a3641;
 }
 
+.search_button {
+  margin-right: 0;
+}
+
 .fa-shopping-basket {
   margin-left: 10px;
   margin-right: 30px;  
@@ -347,6 +351,7 @@ footer {
   font-size: 30px;
 }
 
+
 /*--------------------HOMEPAGE------------------------*/
 
 /*MAIN HOMEPAGE*/
@@ -382,11 +387,12 @@ footer {
   position: relative;
 }
 
-.sale-section .cta-button {
+.sale-section .small-button {
   position: absolute;
   bottom: 20%;
   left: 45%;
 }
+
 
 .sale-text {
   font-size: 20px;
@@ -423,11 +429,12 @@ footer {
   background-image: url(../images/women.homepage.jpg);
 }
 
-.col-men a,
-.col-women a {
+.col-men .small-button,
+.col-women .small-button {
   position: absolute;
   bottom: 20%;
   left: 35%;
+  font-size: 20px;
 }
 
 .section-three {
@@ -556,6 +563,12 @@ footer {
 }
 
 .signin-form {
+  background-color: #f0f0f0cc;
+  padding: 5px;
+  margin: 0 300px 20px;
+}
+
+.signin-form {
   margin-bottom: 50px;
 }
 
@@ -567,7 +580,7 @@ footer {
   flex-direction: column;
   align-items: center;
   top: 20%;
-  color: #fff;
+  color: black;
   margin-bottom: 50px;
   width: auto;
 }
@@ -578,10 +591,9 @@ footer {
   max-width: 200px;
 }
 
-
 .form-error {
   margin-top: 2px;
-  font-size: 15px;
+  font-size: 18px;
   margin-left: 10px;
   color: red;
   display: none;
@@ -614,7 +626,7 @@ input {
   font-size: 18px;
   margin: 5px;
   padding: 0;
-  color: #fff;
+  color: black;
 }
 
 .create-new-account,
@@ -719,6 +731,12 @@ input {
 .product:hover {
   background: #8f8f8f4d;
 }
+
+.product h2,
+.product p {
+  padding-left: 15px;
+}
+
 
 button.small-button {
   align-self: center;
@@ -921,8 +939,9 @@ max-height: 150px;
   font-weight: bold;
 }
 
-.form-wrapper2 .small-button {
+.form-wrapper2 button {
   margin-top: 30px; 
+  width: fit-content;
 }
 
 .small-button a {
@@ -934,9 +953,9 @@ max-height: 150px;
   margin-top: 10px;
 }
 
-textarea {
+ #address {
     border-radius: 5px;
-    width: 300px;
+    width: 250px;
 }
 
 .form-error {
@@ -946,8 +965,6 @@ textarea {
   color: red;
   display: none;
 }
-
-
 
 
 
@@ -1035,14 +1052,9 @@ textarea {
 
   .nav-container {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
     justify-items: center;
-    align-content: center;
-  }
-
-  .item_logo {
-    align-content: center;
-    justify-self: center;
   }
 
   .logo {
@@ -1051,9 +1063,13 @@ textarea {
     margin: 10px;
   }
 
+  .icons {
+    margin-right: 10px;
+  }
+
   .fa-user-circle,
   .fa-shopping-basket {
-    margin-right: 1px;
+    margin-right: 1px;  
   }
 
   .fa-user-circle,
@@ -1088,10 +1104,6 @@ textarea {
   }
 
   .spacer {
-    min-height: 70px;
-  }
-
-  .fa-search {
     display: none;
   }
 
@@ -1101,32 +1113,28 @@ textarea {
 
   .search2 {
     display: flex;
-    top: 80px;
-    height: 40px;
-    border-radius: 50%;
-    box-shadow: 0 0 2px black;
-    position: fixed;
-    background: #fff;
-    z-index: 150;
-    right: 3%;
-    transform: translate(-3%, -3%);
+    margin-top: 70px;
+    height: 60px;
+    position: static;
+    background: #f0f0f0;
+ 
+    width: 100%;
   }
 
   .search2 i {
-    display: inline-block;
+    margin-left: 0;
     color: #0a3641;
   }
 
-  .search2:hover {
-    border-radius: 0;
-    width: 250px;
-  }
 
   .search2:hover > .search-text2 {
     padding: 10px;
-    height: 20px;
+    height: 30px;
     width: 100%;
-    align-content: center;
+  }
+
+  .search2:hover i {
+    display: none;
   }
 
   .search-text2 {
@@ -1141,8 +1149,7 @@ textarea {
     border: none;
     background: none;
     cursor: pointer;
-    margin-right: 3px;
-    padding: 1;
+    
   }
 
   /***BASKET***/
@@ -1209,9 +1216,9 @@ textarea {
     left: 20px;
   }
 
-  .sale-section .cta-button {
+  .sale-section .small-button {
     bottom: 30%;
-    left: 35%;
+    left: 30%;
   }
 
   .section-two {
@@ -1226,9 +1233,10 @@ textarea {
     background-position: top;
   }
 
-  .sale-section a,
-  .col-men a,
-  .col-women a {
+
+  .col-men .small-button,
+  .col-women .small-button {
+    font-size: 10px;
     width: 20%;
   }
 
@@ -1239,6 +1247,10 @@ textarea {
     align-items: center;
     justify-content: space-around;
     margin: 0;
+  }
+
+  .form-error {
+    font-size: 12px;
   }
 
   .point {
@@ -1305,6 +1317,10 @@ textarea {
   .fa-bars {
     display: none;
   }
+
+  .sale-section .small-button {
+    font-size: 20px;
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -1338,6 +1354,8 @@ textarea {
 @media screen and (max-width: 810px) {
   .signin-background {
     max-height: 70vh;
+    margin-top: 75px; 
+    max-height: fit-content;
   }
 
   .sign-title {
@@ -1351,6 +1369,7 @@ textarea {
     justify-content: center;
     align-content: center;
     left: 25%;
+
   }
 
   .form-wrapper > * {
@@ -1358,12 +1377,24 @@ textarea {
     border-radius: 5%;
   }
 
+  .signin-form {
+    padding: 5px;
+    margin: 0 20px 20px;
+  }
+
   .signin-button {
     margin-top: 20px;
     align-content: center;
     left: 35%;
+    font-size: 12px;
+  }
+
+  .signin-button-two a {
+    font-size: 12px;
   }
 }
+
+
 
 /*--------------------ABOUT------------------------------*/
 @media screen and (max-width: 810px) {
@@ -1422,10 +1453,12 @@ textarea {
     font-size: 18px;
   }
 
+  .product h2,
   .product p {
-    padding-bottom: 12px;
-    font-size: 16px;
-}
+  padding: 4px 10px;
+  font-size: 18px;
+  }
+
   .colors i {
     font-size: 10px;
     margin-right: 5px;
@@ -1510,7 +1543,6 @@ textarea {
     text-align: center;
   }
 
-
 }
 
 /*--------------------CHECKOUT PAGE WOMEN & MEN-----------*/
@@ -1568,8 +1600,7 @@ textarea {
   }
 
   .form-wrapper2 .cta-button {
-    margin-top: 30px;
-    margin-left: 10%;
+    align-self: center;
   }
 
   .shipping-address {

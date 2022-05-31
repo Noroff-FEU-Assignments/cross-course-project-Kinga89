@@ -16,7 +16,7 @@ jackets.forEach(function (product) {
     productsContainer.innerHTML += `
     <div class="product">
     <a href="/product_details/free-spirit.html"><img src="${product.image}" alt="${product.name}"</></a>
-    <h3>${product.name}</h3>
+    <h2>${product.name}</h2>
     <p class="price">${product.currency} ${product.price}</p>
     <button class="cta-button small-button" data-product="${product.id}">Add to cart</button>
     </div>
