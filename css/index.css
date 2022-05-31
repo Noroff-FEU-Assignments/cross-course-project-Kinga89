@@ -593,10 +593,13 @@ footer {
 
 .form-error {
   margin-top: 2px;
-  font-size: 18px;
   margin-left: 10px;
   color: red;
   display: none;
+}
+
+.form-error strong {
+  font-size: 15px;
 }
 
 .validation-passed {
@@ -1369,7 +1372,6 @@ max-height: 150px;
     justify-content: center;
     align-content: center;
     left: 25%;
-
   }
 
   .form-wrapper > * {
@@ -1380,6 +1382,10 @@ max-height: 150px;
   .signin-form {
     padding: 5px;
     margin: 0 20px 20px;
+  }
+
+  .form-error strong {
+    font-size: 12px;
   }
 
   .signin-button {
