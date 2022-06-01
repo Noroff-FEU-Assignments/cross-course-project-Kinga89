@@ -176,6 +176,10 @@ nav a:hover {
   padding-right: 20px;
 }
 
+.basket a.cta-button.small-button {
+  margin-left: 30%;
+}
+
 hr {
   border-style: 1px solid rgb(98, 97, 97);
   margin: 20px;
@@ -721,6 +725,7 @@ input {
   flex-direction: column;
   justify-content: space-between;
   padding-bottom: 20px;
+  border-radius: 3%;
 }
 
 .product img {
@@ -729,6 +734,7 @@ input {
   background-repeat: no-repeat;
   object-fit: cover;
   object-position: cover;
+  border-radius: 3% 3% 0 0;
 }
 
 .product:hover {
@@ -973,12 +979,11 @@ max-height: 150px;
 
 /*-------------------PAYMENT-DETAILS-----------------------*/
 .payment-page-wrapper {
-  margin: 0 auto 50px;
-  max-width: 1000px;
+  margin: 40px auto;
 }
 
 .payment-page-wrapper h1 {
-  margin-bottom: 50px;
+margin-bottom: 50px;
 }
 
 .payment-wrapper {
@@ -988,8 +993,39 @@ max-height: 150px;
   grid-gap: 30px;
 }
 
+.cards, .payment-form {
+  margin-left: 20px;
+} 
+
+.payment-form {
+font-size: 17px;
+}
+
+.payment-form button {
+  margin-top: 30px;
+  align-self: center;
+}
+
+.payment-form a {
+  text-decoration: none;
+}
+
+.date-and-cvc {
+  display: flex;
+}
+
+#cc-exp, 
+#credit-cvc {
+  flex: 1;
+  width: 50px;
+}
+
 .delivery-options {
   margin: 0 20px;
+}
+
+.delivery-options label {
+  font-weight: bold;
 }
 
 .shipping-address2 {
@@ -1106,9 +1142,6 @@ max-height: 150px;
     color: #0a3641;
   }
 
-  .spacer {
-    display: none;
-  }
 
   .search {
     display: none;
@@ -1153,6 +1186,10 @@ max-height: 150px;
     background: none;
     cursor: pointer;
     
+  }
+
+  .spacer {
+      display: none;
   }
 
   /***BASKET***/
@@ -1551,10 +1588,12 @@ max-height: 150px;
 
 }
 
-/*--------------------CHECKOUT PAGE WOMEN & MEN-----------*/
+/*-----------------CHECKOUT PAGE WOMEN & MEN-----------*/
 @media screen and (max-width: 810px) {
   .checkout-page-wrapper {
-    min-height: 100vh;
+      max-height: 70vh;
+      margin-top: 75px; 
+      max-height: fit-content;
   }
 
   .checkout-page-wrapper i {
@@ -1616,6 +1655,12 @@ max-height: 150px;
 
 /*--------------------PAYMENT------------------------*/
 @media screen and (max-width: 810px) {
+  .payment-page-wrapper {
+    max-height: 70vh;
+    margin-top: 75px; 
+    max-height: fit-content;
+  }
+  
   .payment-page-wrapper i {
     margin-left: 25px;
   }
@@ -1634,6 +1679,7 @@ max-height: 150px;
     grid-template-columns: 1fr;
     margin: 30px 0;
     justify-items: center;
+    max-width: 300px;
   }
 
   .delivery-options {
@@ -1654,8 +1700,6 @@ max-height: 150px;
   }
 
   .cards {
-    display: flex;
-    justify-content: flex-start;
     font-size: 100%;
     margin-bottom: 10px;
   }
