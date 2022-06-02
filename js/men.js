@@ -1,4 +1,4 @@
-import { jackets } from "./allJackets.js";
+import { menjackets } from "./menAllJackets.js";
 import { goBack } from "./utils.js";
 
 const productsContainer = document.querySelector(".all-jackets");
@@ -12,10 +12,10 @@ const previousPage = document.querySelector(".fa-arrow-left");
 previousPage.addEventListener("click", goBack);
 
 
-jackets.forEach(function (product) {
+menjackets.forEach(function (product) {
     productsContainer.innerHTML += `
     <div class="product">
-    <a href="/product_details/free-spirit.html"><img src="${product.image}" alt="${product.name}"</></a>
+    <a href="/product_details/mark.html"><img src="${product.image}" alt="${product.name}"</></a>
     <h2>${product.name}</h2>
     <p class="price">${product.currency} ${product.price}</p>
     <button class="small-button" data-product="${product.id}">Add to cart</button>
@@ -28,7 +28,7 @@ const buttons = document.querySelectorAll("button");
 
 buttons.forEach(function (button) {
     button.onclick = function (event) {
-        const itemToAdd = jackets.find(item => item.id === event.target.dataset.product);
+        const itemToAdd = menjackets.find(item => item.id === event.target.dataset.product);
         cartArray.push(itemToAdd);
         console.log(cartArray);
         showCart(cartArray);

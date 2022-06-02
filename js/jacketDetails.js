@@ -93,20 +93,15 @@ function showCart(productsInTheCart) {
 
         total += cartElement.price;
         cartList.innerHTML += `
-        <div class="cart-item">
         <h4>${cartElement.name}</h4>
         <div class="cart-content">
         <img src="${cartElement.image}" alt="${cartElement.name}" class="detail-img"/>
         <p>${cartElement.currency} ${cartElement.price}</p>
         </div>
         <hr></hr>
-        </div>
         `;
-
     });
-
     totalPrice.innerHTML = `Total: $ ${total}`;
-
 }
 
 
