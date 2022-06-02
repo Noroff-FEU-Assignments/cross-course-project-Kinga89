@@ -1,4 +1,4 @@
-import { jackets } from "./allJackets.js";
+import { jackets } from "./womenAllJackets.js";
 import { goBack } from "./utils.js";
 
 const previousPage = document.querySelector(".fa-arrow-left");
@@ -61,7 +61,7 @@ const cart = document.querySelector(".basket");
 const size = document.querySelector("select");
 const cartList = document.querySelector(".cart-list");
 let totalPrice = document.querySelector(".total-price");
-let yourSize = document.querySelector(".yourSize");
+const yourSize = document.querySelector(".yourSize");
 let cartArray = [];
 
 
@@ -98,7 +98,7 @@ function showCart(productsInTheCart) {
         <img src="${cartElement.image}" alt="${cartElement.name}" class="detail-img"/>
         <p>${cartElement.currency} ${cartElement.price}</p>
         </div>
-        <hr></hr>
+       
         `;
     });
     totalPrice.innerHTML = `Total: $ ${total}`;

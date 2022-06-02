@@ -1,4 +1,4 @@
-import { jackets } from "./allJackets.js";
+import { jackets } from "./womenAllJackets.js";
 import { goBack } from "./utils.js";
 
 const productsContainer = document.querySelector(".all-jackets");

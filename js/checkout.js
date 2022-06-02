@@ -6,7 +6,7 @@ console.log(cartItems)
 
 const cartContainer = document.querySelector(".order-details");
 const totalPrice = document.querySelector(".total");
-let yourSize = document.querySelector(".yourSize");
+const yourSize = document.querySelector(".yourSize");
 let total = 0;
 
 previousPage.addEventListener("click", goBack);
