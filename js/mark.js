@@ -20,7 +20,6 @@ jacketContainer.innerHTML += `
 <img src="${markJacket.image}" alt="${markJacket.name}"</>
 <img src="${markJacket.image2}" alt="${markJacket.name}"</>
 <img src="${markJacket.image3}" alt="${markJacket.name}"</>
-<img src="${markJacket.image4}" alt="${markJacket.name}"</>
 </div>
 <div class="product_description">
 <h2>${markJacket.name}</h2>
@@ -43,9 +42,9 @@ jacketContainer.innerHTML += `
 <div class="product-text">
 <p><i class="far fa-check-square green"></i>In stock</p>
 <div class="colors">
-<p>Yellow <i class="fas fa-circle yellow"></i></p>
-<p>Red <i class="fas fa-circle red"></i></p>
-<p>Navy <i class="fas fa-circle navy"></i></p>
+<p>Pink <i class="fas fa-circle pink"></i></p>
+<p>Orange <i class="fas fa-circle orange"></i></p>
+<p>Blue <i class="fas fa-circle blue"></i></p>
 </div>
 <h3>Product description</h3>
 <p>${markJacket.product_description}</p>
