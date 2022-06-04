@@ -1,17 +1,14 @@
 import { menjackets } from "./menAllJackets.js";
 import { goBack } from "./utils.js";
 
-
 const previousPage = document.querySelector(".fa-arrow-left");
 previousPage.addEventListener("click", goBack);
 
 const jacketContainer = document.querySelector(".product-wrapper");
 
 const markJacket = menjackets.find((jacket) => {
-    return jacket.name === "Mark";
-
+  return jacket.name === "Mark";
 });
-
 
 console.log(markJacket.name);
 
@@ -55,7 +52,6 @@ jacketContainer.innerHTML += `
 </div>
 `;
 
-
 const cart = document.querySelector(".basket");
 const size = document.querySelector("select");
 const cartList = document.querySelector(".cart-list");
@@ -63,45 +59,40 @@ let totalPrice = document.querySelector(".total-price");
 const yourSize = document.querySelector(".yourSize");
 let cartArray = [];
 
-
 size.onchange = function chosenSize() {
-    const selectedSize = event.target.value;
-    yourSize.innerHTML = `Size: ${selectedSize}`;
-    console.log(this.value)
+  const selectedSize = event.target.value;
+  yourSize.innerHTML = `Size: ${selectedSize}`;
+  console.log(this.value);
 };
-
 
 /*Add to cart button on details page */
 const buttons = document.querySelectorAll("button");
 buttons.forEach(function (button) {
-    button.onclick = function (event) {
-        const itemToAdd = menjackets.find(item => item.id === event.target.dataset.product);
-        cartArray.push(itemToAdd);
-        console.log(cartArray);
-        showCart(cartArray);
-        localStorage.setItem("cartList", JSON.stringify(cartArray))
-    }
+  button.onclick = function (event) {
+    const itemToAdd = menjackets.find(
+      (item) => item.id === event.target.dataset.product
+    );
+    cartArray.push(itemToAdd);
+    console.log(cartArray);
+    showCart(cartArray);
+    localStorage.setItem("cartList", JSON.stringify(cartArray));
+  };
 });
 
 function showCart(productsInTheCart) {
-    cart.style.display = "block";
-    cartList.innerHTML = "";
-    let total = 0;
+  cart.style.display = "block";
+  cartList.innerHTML = "";
+  let total = 0;
 
-    productsInTheCart.forEach(function (cartElement) {
-
-        total += cartElement.price;
-        cartList.innerHTML += `
+  productsInTheCart.forEach(function (cartElement) {
+    total += cartElement.price;
+    cartList.innerHTML += `
         <h4>${cartElement.name}</h4>
         <div class="cart-content">
         <img src="${cartElement.image}" alt="${cartElement.name}" class="detail-img"/>
         <p>${cartElement.currency} ${cartElement.price}</p>
         </div>
         `;
-    });
-    totalPrice.innerHTML = `Total: $ ${total}`;
+  });
+  totalPrice.innerHTML = `Total: $ ${total}`;
 }
-
-
-
-

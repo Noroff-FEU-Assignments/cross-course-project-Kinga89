@@ -51,7 +51,7 @@ function validatePaymentInfo() {
     expiryDate.style.borderColor = "red";
   }
 
-  /*Checks if the CVC field is filled out*/
+  /*Checks if the CVC matches regEx pattern*/
   if (validateCVC(cvc.value) === false) {
     cvcErr.style.display = "block";
     cvc.style.borderColor = "red";

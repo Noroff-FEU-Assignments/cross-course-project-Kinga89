@@ -103,8 +103,6 @@ function validateForm() {
 
 formWrapper.addEventListener("submit", validateForm);
 
-
-
 function validateEmail(email) {
     const regEx = /\S+@\S+\.\S+/;
     const patternMatches = regEx.test(email);

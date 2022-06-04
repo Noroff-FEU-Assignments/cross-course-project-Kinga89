@@ -11,38 +11,38 @@ const previousPage = document.querySelector(".fa-arrow-left");
 
 previousPage.addEventListener("click", goBack);
 
-
 menjackets.forEach(function (product) {
-    productsContainer.innerHTML += `
+  productsContainer.innerHTML += `
     <div class="product">
     <a href="/product_details/mark.html"><img src="${product.image}" alt="${product.name}"</></a>
     <h2>${product.name}</h2>
     <p class="price">${product.currency} ${product.price}</p>
     <button class="small-button" data-product="${product.id}">Add to cart</button>
     </div>
-    `
+    `;
 });
-
 
 const buttons = document.querySelectorAll("button");
 
 buttons.forEach(function (button) {
-    button.onclick = function (event) {
-        const itemToAdd = menjackets.find(item => item.id === event.target.dataset.product);
-        cartArray.push(itemToAdd);
-        console.log(cartArray);
-        showCart(cartArray);
-        localStorage.setItem("cartList", JSON.stringify(cartArray))
-    }
+  button.onclick = function (event) {
+    const itemToAdd = menjackets.find(
+      (item) => item.id === event.target.dataset.product
+    );
+    cartArray.push(itemToAdd);
+    console.log(cartArray);
+    showCart(cartArray);
+    localStorage.setItem("cartList", JSON.stringify(cartArray));
+  };
 });
 
 function showCart(productsInTheCart) {
-    cart.style.display = "block";
-    let total = 0;
+  cart.style.display = "block";
+  let total = 0;
 
-    productsInTheCart.forEach(function (cartElement) {
-        total += cartElement.price;
-        cartList.innerHTML += `
+  productsInTheCart.forEach(function (cartElement) {
+    total += cartElement.price;
+    cartList.innerHTML += `
         <div class="cart-item">
         <h4>${cartElement.name}</h4>
         <div class="cart-content">
@@ -52,6 +52,6 @@ function showCart(productsInTheCart) {
         <hr></hr>
         </div>
         `;
-    });
-    totalPrice.innerHTML = `Total: $ ${total}`;
+  });
+  totalPrice.innerHTML = `Total: $ ${total}`;
 }
