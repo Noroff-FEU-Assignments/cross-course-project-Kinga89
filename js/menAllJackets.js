@@ -1,4 +1,4 @@
-export const menjackets = [
+/*export const menjackets = [
   {
     name: "Mark",
     price: 120,
@@ -89,3 +89,4 @@ export const menjackets = [
     careAdvice: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
   },
 ];
+*/

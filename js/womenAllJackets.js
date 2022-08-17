@@ -1,4 +1,4 @@
-export const jackets = [
+/*export const jackets = [
   {
     name: "Free Spirit",
     price: 120,
@@ -92,4 +92,44 @@ export const jackets = [
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
     careAdvice: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
   },
-];
+];*/
+
+
+ /*****  ADD TO CART BUTTON ******/
+ const buttons = document.querySelectorAll("button");
+ buttons.forEach(function (button) {
+   button.onclick = function (event) {
+     const itemToAdd = products.find(
+       (item) => item.id === event.target.dataset.product
+     );
+     console.log(cartArray);
+     cartArray.push(itemToAdd);
+     
+     showCart(cartArray);
+     localStorage.setItem("cartList", JSON.stringify(cartArray));
+   };
+ });
+
+
+ /*****  CART ******/
+function showCart(productsInTheCart) {
+cart.style.display = "block";
+let total = 0;
+
+const cartItems = JSON.parse(localStorage.getItem("cartList"));
+
+productsInTheCart.forEach(function (cartElement) {
+ total += cartElement.prices.price;
+ cartList.innerHTML += `
+     <div class="cart-item">
+     <h4>${cartElement.name}</h4>
+     <div class="cart-content">
+     <img src="${cartElement.images[0].src}" alt="${cartElement.name}" class="detail-img"/>
+     <p>${cartElement.currency} ${cartElement.prices.price}</p>
+     </div>
+     <hr></hr>
+     </div>
+     `;
+});
+totalPrice.innerHTML = `Total: $ ${total}`;
+ }
