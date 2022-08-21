@@ -9,11 +9,11 @@ const container = document.querySelector(".error-container");
 const productsContainer = document.querySelector(".all-jackets");
 previousPage.addEventListener("click", goBack);
 
-const baseUrl = "https://rainydays.kingakot.com/wp-json/wc/store/products";
+const baseUrl = "https://rainydays.kingakot.com/wp-json/wc/store/products?per_page=20";
 
-async function getProducts(url) {
+async function getProducts() {
   try {
-    const response = await fetch(url);
+    const response = await fetch(baseUrl);
     const products = await response.json();
     console.log(products)
     const filteredJackets = products.filter(jacket => jacket.categories[1].slug === "men-jackets");
@@ -72,4 +72,4 @@ async function getProducts(url) {
   }
 };
 
-getProducts(baseUrl);
+getProducts();
