@@ -10,14 +10,6 @@ const productsContainer = document.querySelector(".all-jackets");
 previousPage.addEventListener("click", goBack);
 
 
-const options = {
-  method: "GET",
-  headers: {
-    "consumer_key": "ck_b30a085b38d71ddf0c66e6b75da22f2cddcc259c",
-    "consumer_secret": "cs_710067729cf81abecc0f53699847cdb47b9f3468"
-  },
-};
-
 const baseUrl = "https://rainydays.kingakot.com/wp-json/wc/store/products?per_page=20";
 
 async function getProducts() {
