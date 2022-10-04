@@ -1,29 +1,35 @@
-# cross-course-project-Kinga89
+<h1>Rainy Days e-commerce site</h1>
 
-cross-course-project-Kinga89 created by GitHub Classroom
+<div id="images">
+<img src="images/screenshot.rainydays.png" width="400" height="200"/>
+<img src="images/screenshot.rainydays2.png" width="400" height="200"/>
+</div>
 
-Rainy Days e-commerce website
-![Screenshot of Rainydays website](images/screenshot.rainydays.png)
-
-<img src="images/screenshot.rainydays.png" width="400" height="300"/>
-**Description**
+<h2>Description</h2>
 This is an e-commerce site for an online shop selling men's and women’s rain jackets. 
 It was created for a course assignment with given logo. All other resources, like images have been found through free online photo databases.
 
-Site architecture: 
-- Home 
-- List of Jackets 
-- Specific page showing the jacket 
-- About 
-- Contact
+<h3>Site architecture</h3>
+<ul>
+<li>Home</li>
+<li>List of Jackets </li>
+<li>Specific page showing the jacket</li>
+<li>About</li>
+<li>Contact</li>
+</ul>
 
-**Built With** 
-- HTML5 
-- CSS 
-- Javascript 
-- WordPress REST API
 
-**Installing**
+<h2>Built With</h2> 
+<ul>
+<li>HTML5</li>
+<li>CSS</li>
+<li>Javascript</li>
+<li>WordPress REST API</li>
+</ul>
+
+
+
+<h2>Installing</h2> 
 Project can be accessed by cloning following repository: Noroff-FEU-Assignments/cross-course-project-Kinga89 
 
 ---
