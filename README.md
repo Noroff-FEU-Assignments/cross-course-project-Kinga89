@@ -32,7 +32,12 @@ Contact form includes input validation that checks if the pattern matches with d
 
 
 <h2>Installing</h2> 
-<p>Project can be accessed by cloning following repository: Noroff-FEU-Assignments/cross-course-project-Kinga89 </p>
+Project can be accessed by cloning following repository: 
+
+
+```
+git clone Noroff-FEU-Assignments/cross-course-project-Kinga89
+```
 
 ---
 
@@ -49,4 +54,3 @@ Contact form includes input validation that checks if the pattern matches with d
 <div align="center">
   <img src="https://komarev.com/ghpvc/?username=Kinga89&style=flat-square&color=blue" alt=""/>
 </div>
-
