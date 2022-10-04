@@ -6,8 +6,10 @@
 </div>
 
 <h2>Description</h2>
-This is an e-commerce site for an online shop selling men's and women’s rain jackets. 
+<p>This is an e-commerce site for an online shop selling men's and women’s rain jackets. 
+List of jackets is created with the help of Wordpress
 It was created for a course assignment with given logo. All other resources, like images have been found through free online photo databases.
+Contact form includes input validation that checks if the pattern matches with defined regular expression.</p>
 
 <h3>Site architecture</h3>
 <ul>
@@ -30,7 +32,7 @@ It was created for a course assignment with given logo. All other resources, lik
 
 
 <h2>Installing</h2> 
-Project can be accessed by cloning following repository: Noroff-FEU-Assignments/cross-course-project-Kinga89 
+<p>Project can be accessed by cloning following repository: <a href="Noroff-FEU-Assignments/cross-course-project-Kinga89"></a> </p>
 
 ---
 
