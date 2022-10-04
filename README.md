@@ -23,7 +23,21 @@ Site architecture:
 - WordPress REST API
 
 **Installing**
-Project can be accessed by cloning following repository: Noroff-FEU-Assignments/cross-course-project-Kinga89
+Project can be accessed by cloning following repository: Noroff-FEU-Assignments/cross-course-project-Kinga89 
 
-**Contact**
-My LinkedIn page: https://www.linkedin.com/in/kinga-kot-3a4b8a149/
+---
+
+<div id="social" align="center">
+<a href="https://www.linkedin.com/in/kinga-kot-3a4b8a149/">
+  <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
+ </a>
+  <a href="kotkiga89@gmail.com">
+  <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail Badge"/>
+ </a>
+</div>
+
+
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=Kinga89&style=flat-square&color=blue" alt=""/>
+</div>
+
