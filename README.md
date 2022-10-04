@@ -5,6 +5,7 @@ cross-course-project-Kinga89 created by GitHub Classroom
 Rainy Days e-commerce website
 ![Screenshot of Rainydays website](images/screenshot.rainydays.png)
 
+<img src="images/screenshot.rainydays.png" width="400" height="300"/>
 **Description**
 This is an e-commerce site for an online shop selling men's and women’s rain jackets. 
 It was created for a course assignment with given logo. All other resources, like images have been found through free online photo databases.
