@@ -32,7 +32,12 @@ Contact form includes input validation that checks if the pattern matches with d
 
 
 <h2>Installing</h2> 
-<p>Project can be accessed by cloning following repository: Noroff-FEU-Assignments/cross-course-project-Kinga89 </p>
+Project can be accessed by cloning following repository: 
+
+
+```
+git clone Noroff-FEU-Assignments/cross-course-project-Kinga89
+```
 
 ---
 
