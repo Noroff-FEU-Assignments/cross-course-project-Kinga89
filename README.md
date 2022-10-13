@@ -7,7 +7,7 @@
 
 <h2>Description</h2>
 <p>This is an e-commerce site for an online shop selling rain jackets. 
-List of jackets is created with the help of Wordpress
+List of jackets is created with the help of Wordpress REST API.
 It was created for a course assignment with given logo. All other resources, like images have been found through free online photo databases.
 Contact form includes input validation that checks if the pattern matches with defined regular expression.</p>
 
