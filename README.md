@@ -1,37 +1,31 @@
-<h1>Rainy Days e-commerce site</h1>
+# Rainy Days e-commerce site
+This is an e-commerce site for an online shop selling rain jackets for men and women.
 
 <div id="images">
 <img src="images/screenshot.rainydays.png" width="400" height="200"/>
 <img src="images/screenshot.rainydays2.png" width="400" height="200"/>
 </div>
 
-<h2>Description</h2>
-<p>This is an e-commerce site for an online shop selling men's and women’s rain jackets. 
-List of jackets is created with the help of Wordpress
-It was created for a course assignment with given logo. All other resources, like images have been found through free online photo databases.
-Contact form includes input validation that checks if the pattern matches with defined regular expression.</p>
+## Description 
+The site was built for a course assignment. Home page contains necessary information about what the Rainy Days is and has direct links to the list of jackets for the visitors that want to take a quick look on the jackets. List of jackets is created and stored on Wordpress and fetched with API. Specific pages are created dynamically with query string parameter. 
+Contact page contains a contact form that includes input validation which checks if the input matches with the pattern defined with regular expression.
 
-<h3>Site architecture</h3>
-<ul>
-<li>Home</li>
-<li>List of Jackets </li>
-<li>Specific page showing the jacket</li>
-<li>About</li>
-<li>Contact</li>
-</ul>
+### Site architecture
+- Home
+- List of Jackets
+- Specific page showing the jacket
+- About
+- Contact
 
 
-<h2>Built With</h2> 
-<ul>
-<li>HTML5</li>
-<li>CSS</li>
-<li>Javascript</li>
-<li>WordPress REST API</li>
-</ul>
+## Built With
+- HTML5
+- CSS
+- Javascript
+- API from Wordpress
 
 
-
-<h2>Installing</h2> 
+## Installing
 Project can be accessed by cloning following repository: 
 
 
